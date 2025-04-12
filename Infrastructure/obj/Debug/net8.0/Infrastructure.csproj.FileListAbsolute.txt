@@ -19,3 +19,4 @@ D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\Infrastructure\obj\Debug\n
 D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
 D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\Infrastructure\bin\Debug\net8.0\CommonOperations.dll
 D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\Infrastructure\bin\Debug\net8.0\CommonOperations.pdb
+D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json

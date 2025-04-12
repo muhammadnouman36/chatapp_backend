@@ -87,6 +87,9 @@ builder.Services.AddSwaggerGen(opt =>
     });
 });
 
+// required: bind to dynamic port from Render
+builder.WebHost.UseUrls($"http://*:{Environment.GetEnvironmentVariable("PORT") ?? "5000"}");
+
 var app = builder.Build();
 
 // Enable Developer Exception Page for debugging

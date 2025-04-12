@@ -217,3 +217,4 @@ D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\LinkFree\bin\Debug\net8.0\
 D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\LinkFree\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
 D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\LinkFree\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
 D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\LinkFree\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
+D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\LinkFree\obj\Debug\net8.0\LinkFree.sourcelink.json
