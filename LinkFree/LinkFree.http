@@ -1,0 +1,6 @@
+@LinkFree_HostAddress = http://localhost:5274
+
+GET {{LinkFree_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
