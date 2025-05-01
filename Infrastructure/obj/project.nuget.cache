@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "a5nRoVZs+uc=",
+  "dgSpecHash": "78DXBDSqYbU=",
   "success": true,
   "projectFilePath": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\S.S.T\\.nuget\\packages\\awssdk.core\\3.7.400.72\\awssdk.core.3.7.400.72.nupkg.sha512",
+    "C:\\Users\\S.S.T\\.nuget\\packages\\awssdk.s3\\3.7.411\\awssdk.s3.3.7.411.nupkg.sha512",
     "C:\\Users\\S.S.T\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\S.S.T\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\S.S.T\\.nuget\\packages\\google.apis\\1.69.0\\google.apis.1.69.0.nupkg.sha512",

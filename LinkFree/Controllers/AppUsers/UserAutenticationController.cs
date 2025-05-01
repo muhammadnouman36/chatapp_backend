@@ -34,6 +34,33 @@ namespace LinkFree.Controllers.AppUsers
             return Ok(result);
         }
 
+        [HttpPost("UnBlockUser")]
+        public IActionResult UnBlockUser(long Id)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var result = _services.UnBlockUser(Id);
+            return Ok(result);
+        }
+        [HttpPost("BlockUser")]
+        public IActionResult BlockUser(DeclineUserVM model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var result = _services.BlockUser(model);
+            return Ok(result);
+        }
+
+        [HttpPost("DeletUser")]
+        public IActionResult DeleteUser(long Id)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var result = _services.DeleteUser(Id);
+            return Ok(result);
+        }
+
+
         [HttpPost("ContinueWithGoogle")]
         public async Task<IActionResult> ContinueWithGoogle(string idToken)
         {
@@ -69,32 +96,6 @@ namespace LinkFree.Controllers.AppUsers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             var result = _services.ResetUserPassword(ResetToken, password);
-            return Ok(result);
-        }
-
-        [HttpPost("UnBlockUser")]
-        public IActionResult UnBlockUser(long Id)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-            var result = _services.UnBlockUser(Id);
-            return Ok(result);
-        }
-        [HttpPost("BlockUser")]
-        public IActionResult BlockUser(DeclineUserVM model)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-            var result = _services.BlockUser(model);
-            return Ok(result);
-        }
-
-        [HttpPost("DeletUser")]
-        public IActionResult DeleteUser(long Id)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-            var result = _services.DeleteUser(Id);
             return Ok(result);
         }
     }

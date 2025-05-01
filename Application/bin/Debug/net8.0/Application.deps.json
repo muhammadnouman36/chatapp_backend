@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "Application/1.0.0": {
         "dependencies": {
+          "AWSSDK.S3": "3.7.411",
           "Domain": "1.0.0",
           "Microsoft.AspNet.Identity.Core": "2.2.4",
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
@@ -16,6 +17,25 @@
         },
         "runtime": {
           "Application.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.7.400.72": {
+        "runtime": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.400.72"
+          }
+        }
+      },
+      "AWSSDK.S3/3.7.411": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.400.72"
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.S3.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.411.0"
+          }
         }
       },
       "Microsoft.AspNet.Identity.Core/2.2.4": {
@@ -515,6 +535,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AWSSDK.Core/3.7.400.72": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-L/3vuMdnTwLjfJm8pPUJXl2cKmam4rDnOC1mrJjUGdoSDzExIJxgzMjZi1cdCGd8aWJGPkizJGQz6+q2wwnHVA==",
+      "path": "awssdk.core/3.7.400.72",
+      "hashPath": "awssdk.core.3.7.400.72.nupkg.sha512"
+    },
+    "AWSSDK.S3/3.7.411": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nIpjKnAnSTDzBwGBoRhkVChXDxX8ivc6Pe1aX1ITQsvx4HVfXn/knYh6euHHNknt1uuOMS2I8Zu0LG4nzjn9jw==",
+      "path": "awssdk.s3/3.7.411",
+      "hashPath": "awssdk.s3.3.7.411.nupkg.sha512"
     },
     "Microsoft.AspNet.Identity.Core/2.2.4": {
       "type": "package",

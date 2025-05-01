@@ -14,6 +14,7 @@ namespace Infrastructure.Services.Chat
     {
         private readonly IConfiguration _config;
         private readonly AppDbContext _context;
+        private static readonly Dictionary<long, string> _userConnections = new();
 
         public ChatService(IConfiguration config, AppDbContext context)
         {
@@ -43,6 +44,33 @@ namespace Infrastructure.Services.Chat
 
             return response;
 
+        }
+
+
+
+        public void AddUser(long userId, string connectionId)
+        {
+            _userConnections[userId] = connectionId;
+        }
+
+        public string? GetConnectionId(long userId)
+        {
+            _userConnections.TryGetValue(userId, out var connectionId);
+            return connectionId;
+        }
+
+        public void RemoveUser(string connectionId)
+        {
+            var item = _userConnections.FirstOrDefault(x => x.Value == connectionId);
+            if (!item.Equals(default(KeyValuePair<long, string>)))
+            {
+                _userConnections.Remove(item.Key);
+            }
+        }
+
+        public IEnumerable<string> GetAllConnectionIds()
+        {
+            return _userConnections.Values;
         }
     }
 }

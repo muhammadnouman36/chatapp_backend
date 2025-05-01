@@ -131,6 +131,81 @@
         }
       }
     },
+    "/api/UserAutentication/UnBlockUser": {
+      "post": {
+        "tags": [
+          "UserAutentication"
+        ],
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/UserAutentication/BlockUser": {
+      "post": {
+        "tags": [
+          "UserAutentication"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeclineUserVM"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeclineUserVM"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeclineUserVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/UserAutentication/DeletUser": {
+      "post": {
+        "tags": [
+          "UserAutentication"
+        ],
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/UserAutentication/ContinueWithGoogle": {
       "post": {
         "tags": [
@@ -232,48 +307,26 @@
         }
       }
     },
-    "/api/UserAutentication/UnBlockUser": {
+    "/api/WasabiContoller/UploadBase64": {
       "post": {
         "tags": [
-          "UserAutentication"
-        ],
-        "parameters": [
-          {
-            "name": "Id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/UserAutentication/BlockUser": {
-      "post": {
-        "tags": [
-          "UserAutentication"
+          "WasabiContoller"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DeclineUserVM"
+                "$ref": "#/components/schemas/UploadToWasabi"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DeclineUserVM"
+                "$ref": "#/components/schemas/UploadToWasabi"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DeclineUserVM"
+                "$ref": "#/components/schemas/UploadToWasabi"
               }
             }
           }
@@ -285,21 +338,138 @@
         }
       }
     },
-    "/api/UserAutentication/DeletUser": {
+    "/api/WasabiContoller/UpdateBase64": {
       "post": {
         "tags": [
-          "UserAutentication"
+          "WasabiContoller"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateOnWasabi"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateOnWasabi"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateOnWasabi"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/WasabiContoller/GetBase64": {
+      "get": {
+        "tags": [
+          "WasabiContoller"
         ],
         "parameters": [
           {
-            "name": "Id",
+            "name": "filepath",
             "in": "query",
             "schema": {
-              "type": "integer",
-              "format": "int64"
+              "type": "string"
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/WasabiContoller/DeleteBase64": {
+      "post": {
+        "tags": [
+          "WasabiContoller"
+        ],
+        "parameters": [
+          {
+            "name": "filepath",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/WasabiContoller/GetPreSignedUrl": {
+      "post": {
+        "tags": [
+          "WasabiContoller"
+        ],
+        "parameters": [
+          {
+            "name": "fileKey",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bucketName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/WasabiContoller/upload-wasabi-async": {
+      "post": {
+        "tags": [
+          "WasabiContoller"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "File": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "access": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "encoding": {
+                "File": {
+                  "style": "form"
+                },
+                "access": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -407,6 +577,38 @@
             "nullable": true
           },
           "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateOnWasabi": {
+        "type": "object",
+        "properties": {
+          "base64": {
+            "type": "string",
+            "nullable": true
+          },
+          "filePath": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UploadToWasabi": {
+        "type": "object",
+        "properties": {
+          "base64": {
+            "type": "string",
+            "nullable": true
+          },
+          "folderName": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileName": {
             "type": "string",
             "nullable": true
           }

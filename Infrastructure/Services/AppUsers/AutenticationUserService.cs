@@ -135,6 +135,82 @@ namespace Infrastructure.Services.AppUsers
             return response;
         }
 
+        public ResponseVM UnBlockUser(long Id)
+        {
+            ResponseVM response = ResponseVM.Instance;
+
+            // Check if the user exists and is not deleted
+            var user = _context.AppUser.FirstOrDefault(a => a.Id == Id && !a.IsDeleted);
+
+            if (user == null)
+            {
+                response.responseCode = 400;
+                response.errorMessage = "No active user found";
+                return response;
+            }
+
+            // Unblock the user
+            user.IsBlocked = false;
+            // Update the user synchronously and save changes
+            _context.AppUser.Update(user);
+            _context.SaveChanges();
+
+            response.responseCode = 200;
+            response.responseMessage = "User UnBlocked";
+
+            return response;
+        }
+
+        public ResponseVM DeleteUser(long Id)
+        {
+            ResponseVM response = ResponseVM.Instance;
+
+            // Check if the user exists and is not already deleted
+            var user = _context.AppUser.FirstOrDefault(a => a.Id == Id && !a.IsDeleted);
+
+            if (user == null)
+            {
+                response.responseCode = 400;
+                response.errorMessage = "No active user found";
+                return response;
+            }
+
+            user.IsDeleted = true;
+            _context.AppUser.Update(user);
+            _context.SaveChanges();
+
+            response.responseCode = 200;
+            response.responseMessage = "User deleted successfully";
+
+            return response;
+        }
+
+        public ResponseVM BlockUser(DeclineUserVM model)
+        {
+            ResponseVM response = ResponseVM.Instance;
+
+            // Fetch user by ID, and check if user exists in one go
+            var user = _context.AppUser.FirstOrDefault(a => a.Id == model.Id && !a.IsDeleted);
+            if (user == null)
+            {
+                response.responseCode = 400;
+                response.errorMessage = "No active user found with the provided ID.";
+                return response;
+            }
+
+            // Block the user
+            user.IsBlocked = true;
+            user.BlockedReason = model.Reason;
+
+            // Update the user and save changes
+            _context.AppUser.Update(user);
+            _context.SaveChanges();
+
+            response.responseCode = 200;
+            response.responseMessage = "User successfully blocked.";
+            return response;
+        }
+
         public async Task<ResponseVM> LoginWithGoogle(string idToken)
         {
             ResponseVM response = ResponseVM.Instance;
@@ -327,81 +403,7 @@ namespace Infrastructure.Services.AppUsers
             return response;
         }
 
-        public ResponseVM UnBlockUser(long Id)
-        {
-            ResponseVM response = ResponseVM.Instance;
 
-            // Check if the user exists and is not deleted
-            var user = _context.AppUser.FirstOrDefault(a => a.Id == Id && !a.IsDeleted);
-
-            if (user == null)
-            {
-                response.responseCode = 400;
-                response.errorMessage = "No active user found";
-                return response; 
-            }
-
-            // Unblock the user
-            user.IsBlocked = false;
-                // Update the user synchronously and save changes
-                _context.AppUser.Update(user);
-                _context.SaveChanges();
-
-                response.responseCode = 200;
-                response.responseMessage = "User UnBlocked";
-
-            return response;
-        }
-
-        public ResponseVM DeleteUser(long Id)
-        {
-            ResponseVM response = ResponseVM.Instance;
-
-            // Check if the user exists and is not already deleted
-            var user = _context.AppUser.FirstOrDefault(a => a.Id == Id && !a.IsDeleted);
-
-            if (user == null)
-            {
-                response.responseCode = 400;
-                response.errorMessage = "No active user found";
-                return response; 
-            }
-
-                user.IsDeleted = true;
-                _context.AppUser.Update(user);
-                _context.SaveChanges();
-
-                response.responseCode = 200;
-                response.responseMessage = "User deleted successfully";
-
-            return response;
-        }
-
-        public ResponseVM BlockUser(DeclineUserVM model)
-        {
-            ResponseVM response = ResponseVM.Instance;
-
-            // Fetch user by ID, and check if user exists in one go
-            var user = _context.AppUser.FirstOrDefault(a => a.Id == model.Id && !a.IsDeleted);
-            if (user == null)
-            {
-                response.responseCode = 400;
-                response.errorMessage = "No active user found with the provided ID.";
-                return response;
-            }
-
-            // Block the user
-            user.IsBlocked = true;
-            user.BlockedReason = model.Reason;
-
-            // Update the user and save changes
-            _context.AppUser.Update(user);
-            _context.SaveChanges();
-
-            response.responseCode =200;
-            response.responseMessage = "User successfully blocked.";
-            return response;
-        }
 
     }
 }

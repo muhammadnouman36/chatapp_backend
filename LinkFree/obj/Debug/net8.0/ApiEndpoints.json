@@ -191,6 +191,112 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LinkFree.Controllers.Wasabi.WasabiContoller",
+    "Method": "Delete",
+    "RelativePath": "api/WasabiContoller/DeleteBase64",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filepath",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LinkFree.Controllers.Wasabi.WasabiContoller",
+    "Method": "Get",
+    "RelativePath": "api/WasabiContoller/GetBase64",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filepath",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LinkFree.Controllers.Wasabi.WasabiContoller",
+    "Method": "PreSignedUrl",
+    "RelativePath": "api/WasabiContoller/GetPreSignedUrl",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileKey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "bucketName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LinkFree.Controllers.Wasabi.WasabiContoller",
+    "Method": "Update",
+    "RelativePath": "api/WasabiContoller/UpdateBase64",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "modal",
+        "Type": "Application.VMs.Wasabi.UpdateOnWasabi",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LinkFree.Controllers.Wasabi.WasabiContoller",
+    "Method": "UploadFile",
+    "RelativePath": "api/WasabiContoller/upload-wasabi-async",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "access",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LinkFree.Controllers.Wasabi.WasabiContoller",
+    "Method": "Upload",
+    "RelativePath": "api/WasabiContoller/UploadBase64",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "modal",
+        "Type": "Application.VMs.Wasabi.UploadToWasabi",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LinkFree.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

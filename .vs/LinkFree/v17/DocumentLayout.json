@@ -3,28 +3,44 @@
   "WorkspaceRootPath": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\linkfree\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|solutionrelative:linkfree\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\linkfree\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|solutionrelative:linkfree\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\application\\vms\\wasabi\\filevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|solutionrelative:application\\vms\\wasabi\\filevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83B37099-DEE2-4792-BEB1-BC078EE2FECA}|CommonOperations\\CommonOperations.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\commonoperations\\methods\\commonmethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83B37099-DEE2-4792-BEB1-BC078EE2FECA}|CommonOperations\\CommonOperations.csproj|solutionrelative:commonoperations\\methods\\commonmethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\linkfree\\controllers\\wasabi\\wasabicontoller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|solutionrelative:linkfree\\controllers\\wasabi\\wasabicontoller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\linkfree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|solutionrelative:linkfree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91390757-5750-4FBF-8987-0B343867BFD6}|Infrastructure\\Infrastructure.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\infrastructure\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91390757-5750-4FBF-8987-0B343867BFD6}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83B37099-DEE2-4792-BEB1-BC078EE2FECA}|CommonOperations\\CommonOperations.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\commonoperations\\commonoperations.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{83B37099-DEE2-4792-BEB1-BC078EE2FECA}|CommonOperations\\CommonOperations.csproj|solutionrelative:commonoperations\\commonoperations.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91390757-5750-4FBF-8987-0B343867BFD6}|Infrastructure\\Infrastructure.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\infrastructure\\signalr\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91390757-5750-4FBF-8987-0B343867BFD6}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\signalr\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\application\\vms\\wasabi\\updateonwasabi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|solutionrelative:application\\vms\\wasabi\\updateonwasabi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91390757-5750-4FBF-8987-0B343867BFD6}|Infrastructure\\Infrastructure.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\infrastructure\\services\\chat\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91390757-5750-4FBF-8987-0B343867BFD6}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\chat\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83B37099-DEE2-4792-BEB1-BC078EE2FECA}|CommonOperations\\CommonOperations.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\commonoperations\\enums\\fileaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83B37099-DEE2-4792-BEB1-BC078EE2FECA}|CommonOperations\\CommonOperations.csproj|solutionrelative:commonoperations\\enums\\fileaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91390757-5750-4FBF-8987-0B343867BFD6}|Infrastructure\\Infrastructure.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{91390757-5750-4FBF-8987-0B343867BFD6}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\application\\vms\\wasabi\\uploadtowasabi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|solutionrelative:application\\vms\\wasabi\\uploadtowasabi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\linkfree\\controllers\\linktree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|solutionrelative:linkfree\\controllers\\linktree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,77 +62,125 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\Dockerfile",
-              "RelativeDocumentMoniker": "LinkFree\\Dockerfile",
-              "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\Dockerfile",
-              "RelativeToolTip": "LinkFree\\Dockerfile",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-04-12T13:11:57.359Z",
-              "EditorCaption": ""
+              "DocumentIndex": 7,
+              "Title": "FileAccess.cs",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\CommonOperations\\Enums\\FileAccess.cs",
+              "RelativeDocumentMoniker": "CommonOperations\\Enums\\FileAccess.cs",
+              "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\CommonOperations\\Enums\\FileAccess.cs",
+              "RelativeToolTip": "CommonOperations\\Enums\\FileAccess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T21:33:16.599Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AppDbContextModelSnapshot.cs",
-              "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Infrastructure\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Infrastructure\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeToolTip": "Infrastructure\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T16:31:50.361Z"
+              "DocumentIndex": 5,
+              "Title": "CommonOperations.csproj",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\CommonOperations\\CommonOperations.csproj",
+              "RelativeDocumentMoniker": "CommonOperations\\CommonOperations.csproj",
+              "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\CommonOperations\\CommonOperations.csproj",
+              "RelativeToolTip": "CommonOperations\\CommonOperations.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-26T21:32:03.527Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "FileVM.cs",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Application\\VMs\\Wasabi\\FileVM.cs",
+              "RelativeDocumentMoniker": "Application\\VMs\\Wasabi\\FileVM.cs",
+              "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Application\\VMs\\Wasabi\\FileVM.cs",
+              "RelativeToolTip": "Application\\VMs\\Wasabi\\FileVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T21:31:29.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\Program.cs",
               "RelativeDocumentMoniker": "LinkFree\\Program.cs",
               "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\Program.cs",
               "RelativeToolTip": "LinkFree\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAIwIYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T18:53:01.756Z",
+              "WhenOpened": "2025-04-25T18:29:50.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\appsettings.json",
+              "RelativeDocumentMoniker": "LinkFree\\appsettings.json",
+              "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\appsettings.json",
+              "RelativeToolTip": "LinkFree\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-25T18:25:41.587Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdateOnWasabi.cs",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Application\\VMs\\Wasabi\\UpdateOnWasabi.cs",
+              "RelativeDocumentMoniker": "Application\\VMs\\Wasabi\\UpdateOnWasabi.cs",
+              "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Application\\VMs\\Wasabi\\UpdateOnWasabi.cs",
+              "RelativeToolTip": "Application\\VMs\\Wasabi\\UpdateOnWasabi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T18:20:35.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UploadToWasabi.cs",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Application\\VMs\\Wasabi\\UploadToWasabi.cs",
+              "RelativeDocumentMoniker": "Application\\VMs\\Wasabi\\UploadToWasabi.cs",
+              "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Application\\VMs\\Wasabi\\UploadToWasabi.cs",
+              "RelativeToolTip": "Application\\VMs\\Wasabi\\UploadToWasabi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T18:17:45.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LinkTree.cs",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\Controllers\\LinkTree.cs",
+              "RelativeDocumentMoniker": "LinkFree\\Controllers\\LinkTree.cs",
+              "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\Controllers\\LinkTree.cs",
+              "RelativeToolTip": "LinkFree\\Controllers\\LinkTree.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T18:16:08.361Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ChatHub.cs",
-              "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Infrastructure\\SignalR\\ChatHub.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\SignalR\\ChatHub.cs",
-              "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Infrastructure\\SignalR\\ChatHub.cs",
-              "RelativeToolTip": "Infrastructure\\SignalR\\ChatHub.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAABAAAAAAAAAAA==",
+              "Title": "WasabiContoller.cs",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\Controllers\\Wasabi\\WasabiContoller.cs",
+              "RelativeDocumentMoniker": "LinkFree\\Controllers\\Wasabi\\WasabiContoller.cs",
+              "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\Controllers\\Wasabi\\WasabiContoller.cs",
+              "RelativeToolTip": "LinkFree\\Controllers\\Wasabi\\WasabiContoller.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAYwEgAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T18:28:18.731Z"
+              "WhenOpened": "2025-04-25T18:16:05.101Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ChatService.cs",
-              "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Infrastructure\\Services\\Chat\\ChatService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Services\\Chat\\ChatService.cs",
-              "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Infrastructure\\Services\\Chat\\ChatService.cs",
-              "RelativeToolTip": "Infrastructure\\Services\\Chat\\ChatService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "CommonMethods.cs",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\CommonOperations\\Methods\\CommonMethods.cs",
+              "RelativeDocumentMoniker": "CommonOperations\\Methods\\CommonMethods.cs",
+              "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\CommonOperations\\Methods\\CommonMethods.cs",
+              "RelativeToolTip": "CommonOperations\\Methods\\CommonMethods.cs",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAmwAkBAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T18:29:07.646Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Infrastructure.csproj",
-              "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Infrastructure\\Infrastructure.csproj",
-              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure.csproj",
-              "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Infrastructure\\Infrastructure.csproj",
-              "RelativeToolTip": "Infrastructure\\Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-06T18:27:56.871Z"
+              "WhenOpened": "2025-04-17T22:44:03.188Z"
             }
           ]
         }

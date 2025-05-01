@@ -1,8 +1,10 @@
 using System.Security.Claims;
 using System.Text;
+using Amazon.S3;
 using Application.Interfaces.AppUsers;
 using Application.Interfaces.Chat;
 using Application.Interfaces.LinkFree;
+using CommonOperations.Methods;
 using Infrastructure.Context;
 using Infrastructure.Services.AppUsers;
 using Infrastructure.Services.Chat;
@@ -21,7 +23,29 @@ builder.Services.AddScoped<IChat, ChatService>();
 builder.Services.AddSignalR();
 
 builder.Services.AddControllers();
-builder.Services.AddControllers().AddApplicationPart(typeof(Program).Assembly);
+//builder.Services.AddControllers().AddApplicationPart(typeof(Program).Assembly);
+
+var wasabiConfig = builder.Configuration.GetSection("Wasabi");
+var accessKey = wasabiConfig["AccessKey"];
+var secretKey = wasabiConfig["SecretKey"];
+var serviceURL = wasabiConfig["ServiceURL"];
+var bucketName = wasabiConfig["BucketName"];
+
+
+builder.Services.AddSingleton<IAmazonS3>(sp =>
+    new AmazonS3Client(
+        accessKey,
+        secretKey,
+        new AmazonS3Config
+        {
+            ServiceURL = serviceURL,
+            ForcePathStyle = true
+        }
+    ));
+
+var serviceProvider = builder.Services.BuildServiceProvider();
+var s3Client = serviceProvider.GetRequiredService<IAmazonS3>();
+CommonMethods.Initialize(s3Client, bucketName);
 
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer
@@ -87,8 +111,6 @@ builder.Services.AddSwaggerGen(opt =>
     });
 });
 
-// required: bind to dynamic port from Render
-builder.WebHost.UseUrls($"http://*:{Environment.GetEnvironmentVariable("PORT") ?? "5000"}");
 
 var app = builder.Build();
 

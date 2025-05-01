@@ -54,6 +54,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.7.411, )"
+            },
             "Microsoft.AspNet.Identity.Core": {
               "target": "Package",
               "version": "[2.2.4, )"
@@ -141,6 +145,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.7.411, )"
+            },
             "Microsoft.AspNet.Identity.Core": {
               "target": "Package",
               "version": "[2.2.4, )"
