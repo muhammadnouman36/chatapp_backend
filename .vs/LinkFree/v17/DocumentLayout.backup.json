@@ -50,8 +50,7 @@
               "RelativeToolTip": "Domain\\Chat\\Friends.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T22:03:25.892Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T22:03:25.892Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "LinkFree\\Program.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAAADgAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T22:02:06.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T22:02:06.203Z"
             },
             {
               "$type": "Document",
@@ -98,7 +96,7 @@
               "RelativeDocumentMoniker": "Infrastructure\\SignalR\\ChatHub.cs",
               "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Infrastructure\\SignalR\\ChatHub.cs",
               "RelativeToolTip": "Infrastructure\\SignalR\\ChatHub.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAcwGAAAABoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAABoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T22:00:06.776Z",
               "EditorCaption": ""
