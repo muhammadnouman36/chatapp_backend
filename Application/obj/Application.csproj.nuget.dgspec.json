@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[3.7.411, )"
             },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.5.0, )"
+            },
             "Microsoft.AspNet.Identity.Core": {
               "target": "Package",
               "version": "[2.2.4, )"

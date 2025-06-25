@@ -5,7 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Application.Interfaces.Chat;
 using Application.VMs;
+using Application.VMs.Token;
+using Domain.Chat;
 using Infrastructure.Context;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 namespace Infrastructure.Services.Chat
@@ -48,9 +51,72 @@ namespace Infrastructure.Services.Chat
 
 
 
+        public ResponseVM GetFriends()
+        {
+            var response = ResponseVM.Instance;
+            var currentUserId = TokenVm.UserID;
+
+            var friends = _context.Friends
+                .Where(f => f.UserId == currentUserId && !f.isUnfriend)
+                .Include(f => f.appuserid2)
+                .ToList();
+
+            if (friends == null || !friends.Any())
+            {
+                response.responseCode = 400;
+                response.responseMessage = "No Friends";
+                response.data = null;
+                return response;
+            }
+            var friendUsers = friends.Select(f => f.appuserid2).ToList();
+
+            response.responseCode = 200;
+            response.responseMessage = "Friends Retrieved";
+            response.data = friendUsers; 
+            return response;
+        }
+
         public void AddUser(long userId, string connectionId)
         {
             _userConnections[userId] = connectionId;
+        }
+
+
+        public ResponseVM AddFriend(long friendId)
+        {
+            var response = ResponseVM.Instance;
+            var currentUserId = TokenVm.UserID;
+
+            var existingFriendship = _context.Friends
+                .FirstOrDefault(f => f.UserId == currentUserId && f.FriendId == friendId);
+
+            if (existingFriendship != null)
+            {
+                response.responseCode = 400;
+                response.responseMessage = "Already friend";
+                return response;
+            }
+
+            var friend = new Friends
+            {
+                UserId = currentUserId,
+                FriendId = friendId,
+                AddedAt = DateTime.UtcNow
+            };
+
+            var friend2 = new Friends
+            {
+                UserId = friendId,
+                FriendId = currentUserId,
+                AddedAt = DateTime.UtcNow
+            };
+
+            _context.Friends.Add(friend);
+            _context.Friends.Add(friend2);
+            _context.SaveChanges();
+            response.responseCode = 200;
+            response.responseMessage = "Added";
+            return response;
         }
 
         public string? GetConnectionId(long userId)

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Domain.AppUsers;
+using Domain.Chat;
 using Domain.Models.LinkFree;
 using Microsoft.EntityFrameworkCore;
 
@@ -30,6 +31,8 @@ namespace Infrastructure.Context
 
         public DbSet<Messages> Messages { get; set; }
 
+        public DbSet<Friends> Friends { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -46,6 +49,19 @@ namespace Infrastructure.Context
                 .WithMany()
                 .HasForeignKey(m => m.ReceiverId)
                 .OnDelete(DeleteBehavior.NoAction);  // No cascade delete for Receiver
+
+
+            modelBuilder.Entity<Friends>()
+    .HasOne(f => f.appuserid)
+    .WithMany()
+    .HasForeignKey(f => f.UserId)
+    .OnDelete(DeleteBehavior.NoAction);  // Prevent cascade delete
+
+            modelBuilder.Entity<Friends>()
+                .HasOne(f => f.appuserid2)
+                .WithMany()
+                .HasForeignKey(f => f.FriendId)
+                .OnDelete(DeleteBehavior.NoAction);  // Prevent cascade delete
         }
         #endregion
     }

@@ -11,5 +11,9 @@ namespace Application.Interfaces.Chat
     {
 
         public ResponseVM GetAllUsers();
+
+        public ResponseVM AddFriend(long friendId);
+
+        public ResponseVM GetFriends();
     }
 }

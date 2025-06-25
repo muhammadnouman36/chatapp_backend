@@ -220,3 +220,6 @@ D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\LinkFree\bin\Debug\net8.0\
 D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\LinkFree\obj\Debug\net8.0\LinkFree.sourcelink.json
 D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\LinkFree\bin\Debug\net8.0\AWSSDK.Core.dll
 D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\LinkFree\bin\Debug\net8.0\AWSSDK.S3.dll
+D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\LinkFree\bin\Debug\net8.0\MediatR.dll
+D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\LinkFree\bin\Debug\net8.0\MediatR.Contracts.dll
+D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\LinkFree\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

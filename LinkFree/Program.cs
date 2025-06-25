@@ -10,17 +10,26 @@ using Infrastructure.Services.AppUsers;
 using Infrastructure.Services.Chat;
 using Infrastructure.Services.LinkFree;
 using Infrastructure.SignalR;
+using LinkFree.InjectedServices;
+using LinkFree.Midddleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+var configuration = builder.Configuration;
+
+
+builder.Services.AddMediatR(config =>
+{
+    config.RegisterServicesFromAssemblies(typeof(CustomeServices).Assembly);
+});
+
+builder.Services.AddCustomServices();
 
 // Add services to the container.
-builder.Services.AddScoped<IUserAutentication, AutenticationUserService>();
-builder.Services.AddScoped<IChat, ChatService>();
-builder.Services.AddSignalR();
+
 
 builder.Services.AddControllers();
 //builder.Services.AddControllers().AddApplicationPart(typeof(Program).Assembly);
@@ -51,6 +60,8 @@ CommonMethods.Initialize(s3Client, bucketName);
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer
 (builder.Configuration.GetConnectionString("ConnectionString")));
 
+builder.Services.AddSignalR();
+
 // JWT
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -67,7 +78,26 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8
             .GetBytes(builder.Configuration["JWT:Secret"]))
         };
+
+        options.Events = new JwtBearerEvents
+        {
+            OnMessageReceived = context =>
+            {
+                var accessToken = context.Request.Query["access_token"];
+
+                // If the request is for our hub...
+                var path = context.HttpContext.Request.Path;
+                if (!string.IsNullOrEmpty(accessToken) &&
+                    (path.StartsWithSegments("/ChatHub")))
+                {
+                    context.Token = accessToken;
+                }
+
+                return Task.CompletedTask;
+            }
+        };
     });
+
 
 builder.Services.AddCors(options => options.AddPolicy(name: "CorsPolicy",
 builder =>
@@ -112,6 +142,18 @@ builder.Services.AddSwaggerGen(opt =>
 });
 
 
+builder.Services.AddSingleton(new TokenValidationParameters
+{
+    ValidateIssuer = true,
+    ValidateAudience = true,
+    ValidAudience = builder.Configuration["JWT:ValidAudience"],
+    ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
+    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"])),
+    ClockSkew = TimeSpan.Zero
+});
+builder.Services.AddTransient<JWTMiddleware>();
+
+
 var app = builder.Build();
 
 // Enable Developer Exception Page for debugging
@@ -123,12 +165,15 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseMiddleware<JWTMiddleware>();
 app.UseCors("CorsPolicy");
+
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapHub<ChatHub>("/ChatHub");
 
-app.UseAuthentication(); // Ensure authentication middleware is before authorization
-app.UseAuthorization();
 
 app.MapControllers();
 

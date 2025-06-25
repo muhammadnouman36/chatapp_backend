@@ -1,8 +1,34 @@
 [
   {
     "ContainingType": "LinkFree.Controllers.Chat.ChatConroller",
+    "Method": "AddFriend",
+    "RelativePath": "api/ChatConroller/Add-friend",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "friendId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LinkFree.Controllers.Chat.ChatConroller",
     "Method": "GetAllUsers",
     "RelativePath": "api/ChatConroller/Get-all-users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LinkFree.Controllers.Chat.ChatConroller",
+    "Method": "GetFriends",
+    "RelativePath": "api/ChatConroller/Get-friends",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

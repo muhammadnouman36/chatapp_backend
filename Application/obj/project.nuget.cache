@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "R09v+DfMPe8=",
+  "dgSpecHash": "aH4wnRxZWrQ=",
   "success": true,
   "projectFilePath": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\S.S.T\\.nuget\\packages\\awssdk.core\\3.7.400.72\\awssdk.core.3.7.400.72.nupkg.sha512",
     "C:\\Users\\S.S.T\\.nuget\\packages\\awssdk.s3\\3.7.411\\awssdk.s3.3.7.411.nupkg.sha512",
+    "C:\\Users\\S.S.T\\.nuget\\packages\\mediatr\\12.5.0\\mediatr.12.5.0.nupkg.sha512",
+    "C:\\Users\\S.S.T\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\S.S.T\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.4\\microsoft.aspnet.identity.core.2.2.4.nupkg.sha512",
     "C:\\Users\\S.S.T\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",
     "C:\\Users\\S.S.T\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.3.0\\microsoft.aspnetcore.authorization.2.3.0.nupkg.sha512",

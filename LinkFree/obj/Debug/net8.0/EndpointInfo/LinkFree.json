@@ -17,6 +17,40 @@
         }
       }
     },
+    "/api/ChatConroller/Get-friends": {
+      "get": {
+        "tags": [
+          "ChatConroller"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ChatConroller/Add-friend": {
+      "post": {
+        "tags": [
+          "ChatConroller"
+        ],
+        "parameters": [
+          {
+            "name": "friendId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/LinkTree/saulink": {
       "post": {
         "tags": [
