@@ -13,6 +13,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Configuration;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using System.Data;
+using Application.VMs.Chat.RandomChat;
 
 namespace Infrastructure.SignalR
 {
@@ -29,22 +31,7 @@ namespace Infrastructure.SignalR
         {
             _config = config;
             _context = context;
-            //_chatService = chatservice;
         }
-
-
-        //public async Task SendMessage(long user, string message,string userName , string timestamp)
-        //{
-        //    try
-        //    {
-        //        await Clients.All.SendAsync("ReceiveMessage", user, message, userName, timestamp);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine("Error sending message: " + ex.Message);
-        //        throw; 
-        //    }
-        //}
 
 
         public async Task SendPrivateMessage(long receiverId, string messageText)
@@ -78,29 +65,46 @@ namespace Infrastructure.SignalR
 
         public async Task RegisterUser(string username)
         {
-            // Store username in Context.Items (optional)
-            Context.Items["username"] = username;
-
             var connectionId = Context.ConnectionId;
 
-            // Try to find a partner
-            var partner = WaitingUsers.FirstOrDefault(u => u.Key != connectionId);
+            // Remove stale data
+            WaitingUsers.Remove(connectionId);
+            PairedUsers.Remove(connectionId);
 
-            if (partner.Key != null)
+            Context.Items["username"] = username;
+
+            // Try to find a random partner
+            var potentialPartners = WaitingUsers
+                .Where(u => u.Key != connectionId)
+                .OrderBy(_ => Guid.NewGuid()) // Randomize selection
+                .ToList();
+
+            if (potentialPartners.Any())
             {
-                // Pair them
-                WaitingUsers.Remove(partner.Key);
-                PairedUsers[connectionId] = partner.Key;
-                PairedUsers[partner.Key] = connectionId;
+                var partner = potentialPartners.First();
+                var partnerId = partner.Key;
+                var partnerUsername = partner.Value;
 
-                await Clients.Client(connectionId).SendAsync("PartnerFound", WaitingUsers[partner.Key]);
-                await Clients.Client(partner.Key).SendAsync("PartnerFound", WaitingUsers[connectionId]);
+                // Remove both from waiting list
+                WaitingUsers.Remove(partnerId);
+
+                // Add to paired users
+                PairedUsers[connectionId] = partnerId;
+                PairedUsers[partnerId] = connectionId;
+
+                // Notify both users
+                await Clients.Client(connectionId).SendAsync("PartnerFound", partnerUsername);
+                await Clients.Client(partnerId).SendAsync("PartnerFound", username);
             }
             else
             {
                 WaitingUsers[connectionId] = username;
             }
+
+            await BroadcastStats();
         }
+
+
 
         public async Task SendRandomMessage(string message)
         {
@@ -110,7 +114,13 @@ namespace Infrastructure.SignalR
             }
         }
 
-        public override Task OnDisconnectedAsync(Exception exception)
+
+        public override async Task OnConnectedAsync()
+        {
+            await BroadcastStats();
+            await base.OnConnectedAsync();
+        }
+        public override async Task OnDisconnectedAsync(Exception exception)
         {
             var connectionId = Context.ConnectionId;
 
@@ -127,9 +137,23 @@ namespace Infrastructure.SignalR
             {
                 WaitingUsers.Remove(connectionId);
             }
-
-            return base.OnDisconnectedAsync(exception);
+            await BroadcastStats();
+            await base.OnDisconnectedAsync(exception);
         }
+
+        private async Task BroadcastStats()
+        {
+            var stats = new RandomChatCount
+            {
+                TotalConnectedUsers = WaitingUsers.Count + PairedUsers.Count,
+                WaitingUsersCount = WaitingUsers.Count,
+                PairedUsersCount = PairedUsers.Count / 2
+            };
+
+            await Clients.All.SendAsync("ConnectionStatsUpdated", stats);
+        }
+
+
 
 
     }
