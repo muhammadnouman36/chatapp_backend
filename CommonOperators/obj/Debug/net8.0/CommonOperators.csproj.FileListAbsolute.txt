@@ -1,5 +1,0 @@
-D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\CommonOperators\obj\Debug\net8.0\CommonOperators.csproj.AssemblyReference.cache
-D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\CommonOperators\obj\Debug\net8.0\CommonOperators.GeneratedMSBuildEditorConfig.editorconfig
-D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\CommonOperators\obj\Debug\net8.0\CommonOperators.AssemblyInfoInputs.cache
-D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\CommonOperators\obj\Debug\net8.0\CommonOperators.AssemblyInfo.cs
-D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\CommonOperators\obj\Debug\net8.0\CommonOperators.csproj.CoreCompileInputs.cache

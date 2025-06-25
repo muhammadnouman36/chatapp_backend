@@ -1,0 +1,52 @@
+# Ignore build output
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ASP.NET Core Secrets
+secrets.json
+
+# VS Code files
+.vscode/
+
+# Rider files
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Publish folder
+/app/publish/
+
+# Docker
+**/Dockerfile.*
+docker-compose.*
+
+# Environment files
+.env
+
+# Dependency cache
+.nuget/
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+
+# Others
+*.db
+*.sqlite
+Thumbs.db
+Desktop.ini
+
+
