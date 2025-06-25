@@ -157,12 +157,12 @@ builder.Services.AddTransient<JWTMiddleware>();
 var app = builder.Build();
 
 // Enable Developer Exception Page for debugging
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
 app.UseHttpsRedirection();
 app.UseMiddleware<JWTMiddleware>();
