@@ -32,8 +32,6 @@ namespace Infrastructure.SignalR
             _config = config;
             _context = context;
         }
-
-
         public async Task SendPrivateMessage(long receiverId, string messageText)
         {
             var senderId = TokenVm.UserID;
@@ -61,8 +59,6 @@ namespace Infrastructure.SignalR
             await Clients.User(receiverId.ToString()).SendAsync("ReceiveMessage", message);
             await Clients.User(senderId.ToString()).SendAsync("ReceiveMessage", message);
         }
-
-
         public async Task RegisterUser(string username)
         {
             var connectionId = Context.ConnectionId;
@@ -105,11 +101,6 @@ namespace Infrastructure.SignalR
 
             await BroadcastStats();
         }
-
-
-
-
-
         public async Task SendRandomMessage(string message)
         {
             if (PairedUsers.TryGetValue(Context.ConnectionId, out var partnerId))
@@ -117,8 +108,6 @@ namespace Infrastructure.SignalR
                 await Clients.Client(partnerId).SendAsync("ReceiveMessage", message);
             }
         }
-
-
         public override async Task OnConnectedAsync()
         {
             await BroadcastStats();
@@ -183,8 +172,6 @@ namespace Infrastructure.SignalR
             await BroadcastStats();
             await base.OnDisconnectedAsync(exception);
         }
-
-
         private async Task BroadcastStats()
         {
             var stats = new RandomChatCount
@@ -196,6 +183,91 @@ namespace Infrastructure.SignalR
 
             await Clients.All.SendAsync("ConnectionStatsUpdated", stats);
         }
+        public async Task SkipAndConnectNext()
+        {
+            var connectionId = Context.ConnectionId;
+
+            // Get current username
+            var username = Context.Items.ContainsKey("username") ? Context.Items["username"]?.ToString() ?? "User" : "User";
+
+            // Disconnect current partner (if any)
+            string previousPartnerId = null;
+            if (PairedUsers.TryGetValue(connectionId, out var currentPartnerId))
+            {
+                // Save previous partner
+                previousPartnerId = currentPartnerId;
+
+                // Remove both from paired
+                PairedUsers.Remove(connectionId);
+                PairedUsers.Remove(currentPartnerId);
+
+                // Notify current partner
+                await Clients.Client(currentPartnerId).SendAsync("PartnerLeft");
+
+                // Temporarily move current partner to waiting list
+                if (!WaitingUsers.ContainsKey(currentPartnerId))
+                {
+                    WaitingUsers[currentPartnerId] = "ReconnectedUser";
+                }
+            }
+
+            // Remove current user from waiting
+            WaitingUsers.Remove(connectionId);
+
+            // Try to find a new partner (excluding current and previous)
+            var potentialPartners = WaitingUsers
+                .Where(u => u.Key != connectionId && u.Key != previousPartnerId)
+                .OrderBy(_ => Guid.NewGuid())
+                .ToList();
+
+            if (potentialPartners.Any())
+            {
+                // New partner found
+                var newPartner = potentialPartners.First();
+                WaitingUsers.Remove(newPartner.Key);
+
+                PairedUsers[connectionId] = newPartner.Key;
+                PairedUsers[newPartner.Key] = connectionId;
+
+                await Clients.Client(connectionId).SendAsync("PartnerFound", newPartner.Value);
+                await Clients.Client(newPartner.Key).SendAsync("PartnerFound", username);
+            }
+            else if (!string.IsNullOrEmpty(previousPartnerId))
+            {
+                // No new partner found, try to reconnect to previous partner
+                if (WaitingUsers.ContainsKey(previousPartnerId))
+                {
+                    WaitingUsers.Remove(previousPartnerId);
+
+                    PairedUsers[connectionId] = previousPartnerId;
+                    PairedUsers[previousPartnerId] = connectionId;
+
+                    var prevUsername = "PreviousUser";
+                    if (Context.Items.ContainsKey("username"))
+                    {
+                        prevUsername = Context.Items["username"]?.ToString() ?? "User";
+                    }
+
+                    await Clients.Client(connectionId).SendAsync("PartnerFound", prevUsername);
+                    await Clients.Client(previousPartnerId).SendAsync("PartnerFound", username);
+                }
+                else
+                {
+                    // Previous partner not available anymore
+                    WaitingUsers[connectionId] = username;
+                    await Clients.Client(connectionId).SendAsync("NoPartnerAvailable");
+                }
+            }
+            else
+            {
+                // No partner available
+                WaitingUsers[connectionId] = username;
+                await Clients.Client(connectionId).SendAsync("NoPartnerAvailable");
+            }
+
+            await BroadcastStats();
+        }
+
 
 
 
