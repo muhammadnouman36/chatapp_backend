@@ -58,21 +58,19 @@
               "RelativeToolTip": "Application\\VMs\\Chat\\RandomChat\\RandomChatCount.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T22:37:14.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-25T22:37:14.138Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Application",
+              "Title": "Application.csproj",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Application\\Application.csproj",
               "RelativeDocumentMoniker": "Application\\Application.csproj",
               "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Application\\Application.csproj",
               "RelativeToolTip": "Application\\Application.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-25T22:35:18.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-25T22:35:18.324Z"
             },
             {
               "$type": "Document",
@@ -108,8 +106,7 @@
               "RelativeToolTip": "LinkFree\\Program.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAAADsAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T22:02:06.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T22:02:06.203Z"
             },
             {
               "$type": "Document",
@@ -131,7 +128,7 @@
               "RelativeDocumentMoniker": "Infrastructure\\SignalR\\ChatHub.cs",
               "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Infrastructure\\SignalR\\ChatHub.cs",
               "RelativeToolTip": "Infrastructure\\SignalR\\ChatHub.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAgwIkAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAYwK4AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T22:00:06.776Z",
               "EditorCaption": ""

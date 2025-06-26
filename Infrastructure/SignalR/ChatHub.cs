@@ -73,10 +73,10 @@ namespace Infrastructure.SignalR
 
             Context.Items["username"] = username;
 
-            // Try to find a random partner
+            // Try to find a random partner (excluding self-pairing by connectionId and username)
             var potentialPartners = WaitingUsers
-                .Where(u => u.Key != connectionId)
-                .OrderBy(_ => Guid.NewGuid()) // Randomize selection
+                .Where(u => u.Key != connectionId && u.Value != username) // avoid matching with self
+                .OrderBy(_ => Guid.NewGuid()) // random
                 .ToList();
 
             if (potentialPartners.Any())
@@ -85,10 +85,10 @@ namespace Infrastructure.SignalR
                 var partnerId = partner.Key;
                 var partnerUsername = partner.Value;
 
-                // Remove both from waiting list
+                // Remove partner from waiting
                 WaitingUsers.Remove(partnerId);
 
-                // Add to paired users
+                // Add both users to paired dictionary
                 PairedUsers[connectionId] = partnerId;
                 PairedUsers[partnerId] = connectionId;
 
@@ -98,11 +98,15 @@ namespace Infrastructure.SignalR
             }
             else
             {
+                // No partner found, add to waiting and notify
                 WaitingUsers[connectionId] = username;
+                await Clients.Client(connectionId).SendAsync("NoPartnerAvailable");
             }
 
             await BroadcastStats();
         }
+
+
 
 
 
@@ -124,22 +128,62 @@ namespace Infrastructure.SignalR
         {
             var connectionId = Context.ConnectionId;
 
-            // Unpair
+            // Step 1: Handle paired user
             if (PairedUsers.TryGetValue(connectionId, out var partnerId))
             {
-                PairedUsers.Remove(partnerId);
+                // Remove both from paired dictionary
                 PairedUsers.Remove(connectionId);
-                _ = Clients.Client(partnerId).SendAsync("PartnerLeft");
+                PairedUsers.Remove(partnerId);
+
+                // Inform the user that their partner left
+                await Clients.Client(partnerId).SendAsync("PartnerLeft");
+
+                // Try to find a new match for the partner
+                if (WaitingUsers.Count > 0)
+                {
+                    // Get a new match for the partner
+                    var nextWaitingUser = WaitingUsers
+                        .Where(u => u.Key != partnerId)
+                        .OrderBy(_ => Guid.NewGuid())
+                        .FirstOrDefault();
+
+                    if (!string.IsNullOrEmpty(nextWaitingUser.Key))
+                    {
+                        WaitingUsers.Remove(nextWaitingUser.Key);
+
+                        // Add both to paired users
+                        PairedUsers[partnerId] = nextWaitingUser.Key;
+                        PairedUsers[nextWaitingUser.Key] = partnerId;
+
+                        // Notify both clients
+                        var partnerUsername = Context.Items.ContainsKey("username") ? Context.Items["username"]?.ToString() : "User";
+                        var newUsername = nextWaitingUser.Value;
+
+                        await Clients.Client(partnerId).SendAsync("PartnerFound", newUsername);
+                        await Clients.Client(nextWaitingUser.Key).SendAsync("PartnerFound", partnerUsername);
+                    }
+                    else
+                    {
+                        // No available match, add to waiting
+                        WaitingUsers[partnerId] = "ReconnectedUser"; // You can pass username if stored
+                        await Clients.Client(partnerId).SendAsync("NoPartnerAvailable");
+                    }
+                }
+                else
+                {
+                    // No waiting users at all
+                    WaitingUsers[partnerId] = "ReconnectedUser";
+                    await Clients.Client(partnerId).SendAsync("NoPartnerAvailable");
+                }
             }
 
-            // Remove from waiting queue
-            if (WaitingUsers.ContainsKey(connectionId))
-            {
-                WaitingUsers.Remove(connectionId);
-            }
+            // Step 2: Remove from waiting list if not already handled
+            WaitingUsers.Remove(connectionId);
+
             await BroadcastStats();
             await base.OnDisconnectedAsync(exception);
         }
+
 
         private async Task BroadcastStats()
         {
