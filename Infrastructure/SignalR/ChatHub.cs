@@ -268,6 +268,13 @@ namespace Infrastructure.SignalR
             await BroadcastStats();
         }
 
+        public Task<bool> CheckUsernameExists(string username)
+        {
+            bool exists = WaitingUsers.Any(u => u.Value == username) || PairedUsers.Any(u => u.Value == username);
+            return Task.FromResult(exists);
+        }
+
+
 
 
 

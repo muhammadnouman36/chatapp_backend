@@ -11,12 +11,20 @@
       "RelativeMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|solutionrelative:application\\vms\\chat\\randomchat\\randomchatcount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|solutionrelative:application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\linkfree\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|solutionrelative:linkfree\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\linkfree\\linkfree.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|solutionrelative:linkfree\\linkfree.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\linkfree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|solutionrelative:linkfree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|solutionrelative:application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B57A13A6-F66A-4989-879E-F37E1AAA887B}|Domain\\Domain.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\domain\\chat\\friends.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B57A13A6-F66A-4989-879E-F37E1AAA887B}|Domain\\Domain.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\domain\\appusers\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B57A13A6-F66A-4989-879E-F37E1AAA887B}|Domain\\Domain.csproj|solutionrelative:domain\\appusers\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|d:\\muhammad nouman\\learning\\projects\\backend\\linkfree\\linkfree\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|solutionrelative:linkfree\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,6 +54,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LinkFree.http",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\LinkFree.http",
+              "RelativeDocumentMoniker": "LinkFree\\LinkFree.http",
+              "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\LinkFree.http",
+              "RelativeToolTip": "LinkFree\\LinkFree.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-07-03T19:20:17.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "RandomChatCount.cs",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Application\\VMs\\Chat\\RandomChat\\RandomChatCount.cs",
@@ -58,11 +75,12 @@
               "RelativeToolTip": "Application\\VMs\\Chat\\RandomChat\\RandomChatCount.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T22:37:14.138Z"
+              "WhenOpened": "2025-06-25T22:37:14.138Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Application.csproj",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Application\\Application.csproj",
               "RelativeDocumentMoniker": "Application\\Application.csproj",
@@ -70,11 +88,12 @@
               "RelativeToolTip": "Application\\Application.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-25T22:35:18.324Z"
+              "WhenOpened": "2025-06-25T22:35:18.324Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Friends.cs",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Domain\\Chat\\Friends.cs",
               "RelativeDocumentMoniker": "Domain\\Chat\\Friends.cs",
@@ -86,7 +105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Messages.cs",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Domain\\AppUsers\\Messages.cs",
               "RelativeDocumentMoniker": "Domain\\AppUsers\\Messages.cs",
@@ -98,27 +117,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\Program.cs",
               "RelativeDocumentMoniker": "LinkFree\\Program.cs",
               "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\Program.cs",
               "RelativeToolTip": "LinkFree\\Program.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAADsAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAAADsAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T22:02:06.203Z"
+              "WhenOpened": "2025-06-20T22:02:06.203Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\appsettings.json",
               "RelativeDocumentMoniker": "LinkFree\\appsettings.json",
               "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\appsettings.json",
               "RelativeToolTip": "LinkFree\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-20T22:02:02.396Z"
+              "WhenOpened": "2025-06-20T22:02:02.396Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -128,7 +149,7 @@
               "RelativeDocumentMoniker": "Infrastructure\\SignalR\\ChatHub.cs",
               "ToolTip": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Infrastructure\\SignalR\\ChatHub.cs",
               "RelativeToolTip": "Infrastructure\\SignalR\\ChatHub.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAiwMEAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAuwBMBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T22:00:06.776Z",
               "EditorCaption": ""
