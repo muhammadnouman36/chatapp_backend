@@ -14,3 +14,19 @@ D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\Application\obj\Debug\net8
 D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\Application\obj\Debug\net8.0\Application.pdb
 D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\Application\obj\Debug\net8.0\ref\Application.dll
 D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\Application\obj\Debug\net8.0\Application.sourcelink.json
+D:\CHAT\chatapp_backend\Application\bin\Debug\net8.0\Application.deps.json
+D:\CHAT\chatapp_backend\Application\bin\Debug\net8.0\Application.dll
+D:\CHAT\chatapp_backend\Application\bin\Debug\net8.0\Application.pdb
+D:\CHAT\chatapp_backend\Application\bin\Debug\net8.0\Domain.dll
+D:\CHAT\chatapp_backend\Application\bin\Debug\net8.0\Domain.pdb
+D:\CHAT\chatapp_backend\Application\obj\Debug\net8.0\Application.csproj.AssemblyReference.cache
+D:\CHAT\chatapp_backend\Application\obj\Debug\net8.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\CHAT\chatapp_backend\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
+D:\CHAT\chatapp_backend\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
+D:\CHAT\chatapp_backend\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+D:\CHAT\chatapp_backend\Application\obj\Debug\net8.0\Application.sourcelink.json
+D:\CHAT\chatapp_backend\Application\obj\Debug\net8.0\Applicat.44B5EDA2.Up2Date
+D:\CHAT\chatapp_backend\Application\obj\Debug\net8.0\Application.dll
+D:\CHAT\chatapp_backend\Application\obj\Debug\net8.0\refint\Application.dll
+D:\CHAT\chatapp_backend\Application\obj\Debug\net8.0\Application.pdb
+D:\CHAT\chatapp_backend\Application\obj\Debug\net8.0\ref\Application.dll

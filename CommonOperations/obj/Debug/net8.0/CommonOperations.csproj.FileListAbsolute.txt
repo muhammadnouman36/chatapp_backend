@@ -16,3 +16,21 @@ D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\CommonOperations\obj\Debug
 D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\CommonOperations\obj\Debug\net8.0\CommonOperations.pdb
 D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\CommonOperations\obj\Debug\net8.0\ref\CommonOperations.dll
 D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\CommonOperations\obj\Debug\net8.0\CommonOperations.sourcelink.json
+D:\CHAT\chatapp_backend\CommonOperations\bin\Debug\net8.0\CommonOperations.deps.json
+D:\CHAT\chatapp_backend\CommonOperations\bin\Debug\net8.0\CommonOperations.dll
+D:\CHAT\chatapp_backend\CommonOperations\bin\Debug\net8.0\CommonOperations.pdb
+D:\CHAT\chatapp_backend\CommonOperations\bin\Debug\net8.0\Application.dll
+D:\CHAT\chatapp_backend\CommonOperations\bin\Debug\net8.0\Domain.dll
+D:\CHAT\chatapp_backend\CommonOperations\bin\Debug\net8.0\Application.pdb
+D:\CHAT\chatapp_backend\CommonOperations\bin\Debug\net8.0\Domain.pdb
+D:\CHAT\chatapp_backend\CommonOperations\obj\Debug\net8.0\CommonOperations.csproj.AssemblyReference.cache
+D:\CHAT\chatapp_backend\CommonOperations\obj\Debug\net8.0\CommonOperations.GeneratedMSBuildEditorConfig.editorconfig
+D:\CHAT\chatapp_backend\CommonOperations\obj\Debug\net8.0\CommonOperations.AssemblyInfoInputs.cache
+D:\CHAT\chatapp_backend\CommonOperations\obj\Debug\net8.0\CommonOperations.AssemblyInfo.cs
+D:\CHAT\chatapp_backend\CommonOperations\obj\Debug\net8.0\CommonOperations.csproj.CoreCompileInputs.cache
+D:\CHAT\chatapp_backend\CommonOperations\obj\Debug\net8.0\CommonOperations.sourcelink.json
+D:\CHAT\chatapp_backend\CommonOperations\obj\Debug\net8.0\CommonOp.946E8233.Up2Date
+D:\CHAT\chatapp_backend\CommonOperations\obj\Debug\net8.0\CommonOperations.dll
+D:\CHAT\chatapp_backend\CommonOperations\obj\Debug\net8.0\refint\CommonOperations.dll
+D:\CHAT\chatapp_backend\CommonOperations\obj\Debug\net8.0\CommonOperations.pdb
+D:\CHAT\chatapp_backend\CommonOperations\obj\Debug\net8.0\ref\CommonOperations.dll

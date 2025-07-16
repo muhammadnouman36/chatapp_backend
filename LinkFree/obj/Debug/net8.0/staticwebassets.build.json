@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "N9JOcxLQP1ETqd79Fxu6/ZRnHezHy/e4XpFa96fWDug=",
+  "Hash": "du3FG/gnNqXkt6IrKKjKevJFDZYsJ8yhiER81mrMfrY=",
   "Source": "LinkFree",
   "BasePath": "_content/LinkFree",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

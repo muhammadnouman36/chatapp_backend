@@ -6600,24 +6600,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\S.S.T\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Right Click\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\LinkFree.csproj",
+      "projectUniqueName": "D:\\CHAT\\chatapp_backend\\LinkFree\\LinkFree.csproj",
       "projectName": "LinkFree",
-      "projectPath": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\LinkFree.csproj",
-      "packagesPath": "C:\\Users\\S.S.T\\.nuget\\packages\\",
-      "outputPath": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\LinkFree\\obj\\",
+      "projectPath": "D:\\CHAT\\chatapp_backend\\LinkFree\\LinkFree.csproj",
+      "packagesPath": "C:\\Users\\Right Click\\.nuget\\packages\\",
+      "outputPath": "D:\\CHAT\\chatapp_backend\\LinkFree\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\S.S.T\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Right Click\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6625,17 +6620,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Application\\Application.csproj": {
-              "projectPath": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Application\\Application.csproj"
+            "D:\\CHAT\\chatapp_backend\\Application\\Application.csproj": {
+              "projectPath": "D:\\CHAT\\chatapp_backend\\Application\\Application.csproj"
             },
-            "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "D:\\Muhammad Nouman\\Learning\\Projects\\Backend\\LinkFree\\Infrastructure\\Infrastructure.csproj"
+            "D:\\CHAT\\chatapp_backend\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\CHAT\\chatapp_backend\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -6649,8 +6645,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -6724,7 +6719,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
