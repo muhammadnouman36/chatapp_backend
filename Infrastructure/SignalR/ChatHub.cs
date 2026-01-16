@@ -68,11 +68,9 @@ namespace Infrastructure.SignalR
             PairedUsers.Remove(connectionId);
 
             Context.Items["username"] = username;
-
-            // Try to find a random partner (excluding self-pairing by connectionId and username)
             var potentialPartners = WaitingUsers
-                .Where(u => u.Key != connectionId && u.Value != username) // avoid matching with self
-                .OrderBy(_ => Guid.NewGuid()) // random
+                .Where(u => u.Key != connectionId && u.Value != username) 
+                .OrderBy(_ => Guid.NewGuid()) 
                 .ToList();
 
             if (potentialPartners.Any())
@@ -272,6 +270,33 @@ namespace Infrastructure.SignalR
         {
             bool exists = WaitingUsers.Any(u => u.Value == username) || PairedUsers.Any(u => u.Value == username);
             return Task.FromResult(exists);
+        }
+
+
+        public async Task StartTyping()
+        {
+            Context.Items["isTyping"] = true;
+
+            var senderId = Context.ConnectionId;
+
+            if (PairedUsers.TryGetValue(senderId, out var partnerId))
+            {
+                await Clients.Client(partnerId)
+                    .SendAsync("PartnerTyping", true);
+            }
+        }
+
+        public async Task StopTyping()
+        {
+            Context.Items["isTyping"] = false;
+
+            var senderId = Context.ConnectionId;
+
+            if (PairedUsers.TryGetValue(senderId, out var partnerId))
+            {
+                await Clients.Client(partnerId)
+                    .SendAsync("PartnerTyping", false);
+            }
         }
 
 

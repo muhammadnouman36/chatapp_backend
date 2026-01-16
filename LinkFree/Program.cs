@@ -28,11 +28,9 @@ builder.Services.AddMediatR(config =>
 
 builder.Services.AddCustomServices();
 
-// Add services to the container.
 
 
 builder.Services.AddControllers();
-//builder.Services.AddControllers().AddApplicationPart(typeof(Program).Assembly);
 
 var wasabiConfig = builder.Configuration.GetSection("Wasabi");
 var accessKey = wasabiConfig["AccessKey"];
@@ -157,12 +155,12 @@ builder.Services.AddTransient<JWTMiddleware>();
 var app = builder.Build();
 
 // Enable Developer Exception Page for debugging
-//if (app.Environment.IsDevelopment())
-//{
+if (app.Environment.IsDevelopment())
+{
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
-//}
+}
 
 app.UseHttpsRedirection();
 app.UseMiddleware<JWTMiddleware>();
