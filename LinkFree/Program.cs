@@ -58,7 +58,11 @@ CommonMethods.Initialize(s3Client, bucketName);
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer
 (builder.Configuration.GetConnectionString("ConnectionString")));
 
-builder.Services.AddSignalR();
+builder.Services.AddSignalR(options =>
+{
+    options.MaximumReceiveMessageSize = 10 * 1024 * 1024; // 10 MB
+});
+
 
 // JWT
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -138,6 +142,7 @@ builder.Services.AddSwaggerGen(opt =>
         }
     });
 });
+
 
 
 builder.Services.AddSingleton(new TokenValidationParameters

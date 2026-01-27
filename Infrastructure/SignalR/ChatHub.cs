@@ -99,13 +99,28 @@ namespace Infrastructure.SignalR
 
             await BroadcastStats();
         }
-        public async Task SendRandomMessage(string message)
+        public async Task SendRandomMessage(RandomMsg msg)
         {
             if (PairedUsers.TryGetValue(Context.ConnectionId, out var partnerId))
             {
-                await Clients.Client(partnerId).SendAsync("ReceiveMessage", message);
+                var chatMessage = new RandomMessageVM
+                {
+                    Message = msg.message,
+                    ImageBase64 = msg.imageBase64,
+                    Timestamp = DateTime.UtcNow,
+                    //IsSeen = false,
+                    //IsOnline = true,
+                    MessageType = !string.IsNullOrEmpty(msg.imageBase64) ? "image" : "text"
+                };
+
+                await Clients.Client(partnerId)
+                    .SendAsync("ReceiveMessage", chatMessage);
+
+                await Clients.Caller
+                    .SendAsync("MessageSent", chatMessage);
             }
         }
+
         public override async Task OnConnectedAsync()
         {
             await BroadcastStats();
