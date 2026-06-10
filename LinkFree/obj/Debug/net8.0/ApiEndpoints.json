@@ -10,6 +10,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LinkFree.Controllers.Public.HomePageController",
+    "Method": "ContactUs",
+    "RelativePath": "api/HomePage/ContactUs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Application.VMs.Public.HomePage.ContactUsVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LinkFree.Controllers.LinkTree",
     "Method": "GetLink",
     "RelativePath": "api/LinkTree/getlinks",

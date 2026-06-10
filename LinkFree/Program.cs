@@ -8,6 +8,7 @@ using Infrastructure.Services.AppUsers;
 using Infrastructure.Services.Chat;
 using Infrastructure.Services.LinkFree;
 using Infrastructure.SignalR;
+using LinkFree.InjectedServices;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -16,9 +17,7 @@ using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddScoped<IUserAutentication, AutenticationUserService>();
-builder.Services.AddScoped<IChat, ChatService>();
-builder.Services.AddSignalR();
+builder.Services.AddCustomeService();
 
 builder.Services.AddControllers();
 builder.Services.AddControllers().AddApplicationPart(typeof(Program).Assembly);
@@ -93,12 +92,12 @@ builder.WebHost.UseUrls($"http://*:{Environment.GetEnvironmentVariable("PORT") ?
 var app = builder.Build();
 
 // Enable Developer Exception Page for debugging
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
 app.UseHttpsRedirection();
 app.UseCors("CorsPolicy");

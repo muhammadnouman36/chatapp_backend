@@ -1,19 +1,24 @@
-﻿using System;
+﻿using Dapper;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
-using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
-using Microsoft.IdentityModel.Tokens;
 
 namespace CommonOperations.Methods
 {
     public static class CommonMethods
     {
-
+        #region JWT
         public static String ConvertStringToShah256(string value)
         {
             StringBuilder Sb = new StringBuilder();
@@ -37,7 +42,6 @@ namespace CommonOperations.Methods
             var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(password);
             return System.Convert.ToBase64String(plainTextBytes);
         }
-
         public static string GenerateJwtToken(string UserEmail, long UserID, string UserName, IConfiguration config)
         {
 
@@ -58,7 +62,6 @@ namespace CommonOperations.Methods
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
-
         public static string ExtractClaimFromToken(string token, string claimType)
         {
             try
@@ -74,5 +77,70 @@ namespace CommonOperations.Methods
             }
         }
 
+        #endregion
+
+
+        #region SMTP
+        public static async Task<string> SendEmail(string userEmail, string subject, string body, IConfiguration config)
+        {
+            string response = "";
+            var smtpSettings = config.GetSection("SmtpSettings");
+
+            using (SmtpClient client = new SmtpClient(smtpSettings["SmtpServer"], int.Parse(smtpSettings["SmtpPort"])))
+            {
+                client.UseDefaultCredentials = false;
+                client.Credentials = new NetworkCredential(smtpSettings["SmtpUsername"], smtpSettings["SmtpPassword"]);
+                MailMessage mailMessage = new MailMessage();
+                mailMessage.From = new MailAddress(smtpSettings["SmtpUsername"]);
+                mailMessage.To.Add(userEmail);
+                mailMessage.Subject = subject;
+                mailMessage.Body = body;
+                mailMessage.IsBodyHtml = true;
+                try
+                {
+                    client.EnableSsl = true;
+                    client.Send(mailMessage);
+                    response = "mail sent successfully";
+                }
+                catch (Exception ex)
+                {
+                    response = $"the error is {ex.Message}";
+                }
+                return response;
+            }
+        }
+
+        #endregion
+
+
+        #region Database
+        private static readonly string _connectionString = new ConfigurationBuilder()
+    .SetBasePath(AppContext.BaseDirectory)
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .Build()
+    .GetConnectionString("ConnectionString");
+
+
+        public static string GetConnectionString()
+        {
+            return _connectionString;
+        }
+        public static async Task<List<dynamic>> ExecuteStoredProcedures(string storedProcedureName, DynamicParameters parameters = null)
+        {
+            string connectionString = GetConnectionString();
+            using (var connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+                var data = (await connection.QueryAsync<dynamic>(
+                    storedProcedureName,
+                    parameters,
+                    commandType: CommandType.StoredProcedure
+                )).ToList();
+                return data;
+            }
+        }
+
+
+        #endregion
     }
 }

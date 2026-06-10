@@ -11,3 +11,16 @@ D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\Domain\obj\Debug\net8.0\re
 D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\Domain\obj\Debug\net8.0\Domain.pdb
 D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\Domain\obj\Debug\net8.0\ref\Domain.dll
 D:\Muhammad Nouman\Learning\Projects\Backend\LinkFree\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Domain\bin\Debug\net8.0\Domain.dll
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Domain\bin\Debug\net8.0\Domain.pdb
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Domain\obj\Debug\net8.0\Domain.dll
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Domain\obj\Debug\net8.0\Domain.pdb
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Domain\obj\Debug\net8.0\ref\Domain.dll

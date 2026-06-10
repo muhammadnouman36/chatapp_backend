@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Domain.AppUsers;
 using Domain.Models.LinkFree;
+using Domain.Public.HomePage;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Context
@@ -17,7 +18,12 @@ namespace Infrastructure.Context
 
         public DbSet<Instagram> Instagram { get; set; }
 
+        #region Public
+        // HomePage
 
+        public DbSet<ContactUs> ContactUs { get; set; }
+
+        #endregion
 
         #region Users
 
