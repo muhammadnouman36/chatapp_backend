@@ -1,12 +1,16 @@
-﻿using Application.Constants.Public.HomePage;
-using Application.Interfaces.Public.HomePage;
+﻿using Application.Interfaces.Public.HomePage;
 using Application.VMs;
 using Application.VMs.Public.HomePage;
+using CommonOperations.Constants.Common;
+using CommonOperations.Constants.Public.HomePage;
+using CommonOperations.Methods;
+using Dapper;
 using Domain.Public.HomePage;
 using Infrastructure.Context;
 using Infrastructure.Migrations;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +36,7 @@ namespace Infrastructure.Services.Public.HomePage
                     Email = model.Email,
                     Subject = model.Subject,
                     Message = model.Message,
-                    Status = ContactStatus.Received
+                    Status = ContactUsStatus.Received
                 };
                 response.responseCode = 200;
                 response.responseMessage = "Thank you for reaching out! We have received your message and will contact you soon.";
@@ -61,25 +65,37 @@ namespace Infrastructure.Services.Public.HomePage
           
             return response;
         }
-
-
-        public List<ContactUsVM> GetAllContacts()
+        public async Task<ResponseVM> GetAll(ContactUsFilterVM filter)
         {
-            return _context.ContactUs
-                .OrderByDescending(x => x.CreatedAt)
-                .Select(x => new ContactUsVM
-                {
-                    id = x.Id,
-                    Name = x.Name,
-                    Email = x.Email,
-                    Subject = x.Subject,
-                    Message = x.Message,
-                    Status = x.Status
-                })
-                .ToList();
+            ResponseVM response = ResponseVM.Instance;
+
+            var parameters = new DynamicParameters();
+            parameters.Add("@PageNumber", filter.PageNumber);
+            parameters.Add("@PageSize", filter.PageSize);
+            parameters.Add("@Search", filter.Search);
+            parameters.Add("@Status", filter.Status);
+            parameters.Add("@FromDate", filter.FromDate);
+            parameters.Add("@ToDate", filter.ToDate);
+
+            var list = await CommonMethods.ExecuteStoredProcedures(
+                "SP_GetAllContacts",
+                parameters);
+
+            int total = list.FirstOrDefault()?.TotalRecords ?? 0;
+
+            response.responseCode = ResponseCode.Success;
+            response.responseMessage = "Contacts retrieved successfully.";
+
+            response.data = new
+            {
+                Data = list,
+                TotalRecords = total,
+                PageNumber = filter.PageNumber,
+                PageSize = filter.PageSize
+            };
+
+            return response;
         }
-
-
         public ContactUsVM GetContactById(long id)
         {
             return _context.ContactUs
@@ -95,8 +111,6 @@ namespace Infrastructure.Services.Public.HomePage
                 })
                 .FirstOrDefault();
         }
-
-
         public ResponseVM DeleteContact(long id)
         {
             ResponseVM response = ResponseVM.Instance;

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Constants.Public.HomePage
+namespace CommonOperations.Constants.Public.HomePage
 {
-    public static class ContactStatus
+      public static class ContactUsStatus
     {
         public const string Received = "Received";
         public const string InReview = "In Review";

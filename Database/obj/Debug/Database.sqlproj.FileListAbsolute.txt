@@ -1,0 +1,6 @@
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Database\bin\Debug\Database.dacpac
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Database\bin\Debug\Database.dll
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Database\bin\Debug\Database.pdb
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Database\obj\Debug\Database.sqlproj.AssemblyReference.cache
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Database\obj\Debug\Database.dll
+D:\Muhammad Nouman\Projects\blabsterV2\chatapp_backend\Database\obj\Debug\Database.pdb

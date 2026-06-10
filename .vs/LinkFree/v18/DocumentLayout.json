@@ -3,6 +3,54 @@
   "WorkspaceRootPath": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{91390757-5750-4FBF-8987-0B343867BFD6}|Infrastructure\\Infrastructure.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\infrastructure\\services\\public\\homepage\\homepageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91390757-5750-4FBF-8987-0B343867BFD6}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\public\\homepage\\homepageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\linkfree\\controllers\\public\\homepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|solutionrelative:linkfree\\controllers\\public\\homepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\linkfree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|solutionrelative:linkfree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\linkfree\\injectedservices\\customeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|solutionrelative:linkfree\\injectedservices\\customeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\application\\vms\\public\\homepage\\contactusfiltervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|solutionrelative:application\\vms\\public\\homepage\\contactusfiltervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\application\\interfaces\\public\\homepage\\ihomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|solutionrelative:application\\interfaces\\public\\homepage\\ihomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Infrastructure\\Migrations\\20260610183915_statusAddedInContactUs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\Migrations\\20260610183915_statusAddedInContactUs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4914AA0-AA7E-48D6-8B70-C41719FBA36C}|Database\\Database.sqlproj|D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Database\\StoreProcedures\\Public\\HomePage\\SP_GetAllContacts.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{F4914AA0-AA7E-48D6-8B70-C41719FBA36C}|Database\\Database.sqlproj|solutionrelative:Database\\StoreProcedures\\Public\\HomePage\\SP_GetAllContacts.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\application\\vms\\public\\homepage\\contactusvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|solutionrelative:application\\vms\\public\\homepage\\contactusvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83B37099-DEE2-4792-BEB1-BC078EE2FECA}|CommonOperations\\CommonOperations.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\commonoperations\\constants\\common\\responsecode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83B37099-DEE2-4792-BEB1-BC078EE2FECA}|CommonOperations\\CommonOperations.csproj|solutionrelative:commonoperations\\constants\\common\\responsecode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\application\\vms\\public\\homepage\\contactuslistingvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|solutionrelative:application\\vms\\public\\homepage\\contactuslistingvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83B37099-DEE2-4792-BEB1-BC078EE2FECA}|CommonOperations\\CommonOperations.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\commonoperations\\constants\\public\\homepage\\contactusstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83B37099-DEE2-4792-BEB1-BC078EE2FECA}|CommonOperations\\CommonOperations.csproj|solutionrelative:commonoperations\\constants\\public\\homepage\\contactusstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{83B37099-DEE2-4792-BEB1-BC078EE2FECA}|CommonOperations\\CommonOperations.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\commonoperations\\methods\\commonmethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83B37099-DEE2-4792-BEB1-BC078EE2FECA}|CommonOperations\\CommonOperations.csproj|solutionrelative:commonoperations\\methods\\commonmethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,44 +59,12 @@
       "RelativeMoniker": "D:0:0:{B57A13A6-F66A-4989-879E-F37E1AAA887B}|Domain\\Domain.csproj|solutionrelative:domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91390757-5750-4FBF-8987-0B343867BFD6}|Infrastructure\\Infrastructure.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\infrastructure\\services\\public\\homepage\\homepageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91390757-5750-4FBF-8987-0B343867BFD6}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\public\\homepage\\homepageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B57A13A6-F66A-4989-879E-F37E1AAA887B}|Domain\\Domain.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\domain\\public\\homepage\\contactus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B57A13A6-F66A-4989-879E-F37E1AAA887B}|Domain\\Domain.csproj|solutionrelative:domain\\public\\homepage\\contactus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\application\\constants\\public\\homepage\\contactstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|solutionrelative:application\\constants\\public\\homepage\\contactstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\application\\interfaces\\public\\homepage\\ihomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|solutionrelative:application\\interfaces\\public\\homepage\\ihomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\application\\vms\\public\\homepage\\contactusvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFB8FAE5-24F3-4466-A6F0-F7E2A5AE4BB9}|Application\\Application.csproj|solutionrelative:application\\vms\\public\\homepage\\contactusvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\linkfree\\injectedservices\\customeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|solutionrelative:linkfree\\injectedservices\\customeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\linkfree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|solutionrelative:linkfree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\linkfree\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|solutionrelative:linkfree\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\linkfree\\controllers\\public\\homepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}|LinkFree\\LinkFree.csproj|solutionrelative:linkfree\\controllers\\public\\homepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Infrastructure\\Migrations\\20260610113929_contactUs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\Migrations\\20260610113929_contactUs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91390757-5750-4FBF-8987-0B343867BFD6}|Infrastructure\\Infrastructure.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\infrastructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -77,6 +93,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{91390757-5750-4FBF-8987-0B343867BFD6}|Infrastructure\\Infrastructure.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{91390757-5750-4FBF-8987-0B343867BFD6}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91390757-5750-4FBF-8987-0B343867BFD6}|Infrastructure\\Infrastructure.csproj|d:\\muhammad nouman\\projects\\blabsterv2\\chatapp_backend\\infrastructure\\migrations\\20260610113929_contactus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91390757-5750-4FBF-8987-0B343867BFD6}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20260610113929_contactus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4914AA0-AA7E-48D6-8B70-C41719FBA36C}|Database\\Database.sqlproj|D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Database\\StoreProcedures\\Public\\HomePage\\SP_GetAllContacts.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{F4914AA0-AA7E-48D6-8B70-C41719FBA36C}|Database\\Database.sqlproj|solutionrelative:Database\\StoreProcedures\\Public\\HomePage\\SP_GetAllContacts.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,67 +110,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Domain",
-              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Domain\\Domain.csproj",
-              "RelativeDocumentMoniker": "Domain\\Domain.csproj",
-              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Domain\\Domain.csproj",
-              "RelativeToolTip": "Domain\\Domain.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-06-10T12:18:29.19Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CommonMethods.cs",
-              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\CommonOperations\\Methods\\CommonMethods.cs",
-              "RelativeDocumentMoniker": "CommonOperations\\Methods\\CommonMethods.cs",
-              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\CommonOperations\\Methods\\CommonMethods.cs",
-              "RelativeToolTip": "CommonOperations\\Methods\\CommonMethods.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAuwHMAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T12:04:15.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ContactStatus.cs",
-              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Application\\Constants\\Public\\HomePage\\ContactStatus.cs",
-              "RelativeDocumentMoniker": "Application\\Constants\\Public\\HomePage\\ContactStatus.cs",
-              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Application\\Constants\\Public\\HomePage\\ContactStatus.cs",
-              "RelativeToolTip": "Application\\Constants\\Public\\HomePage\\ContactStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T11:50:28.737Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CustomeService.cs",
-              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\LinkFree\\InjectedServices\\CustomeService.cs",
-              "RelativeDocumentMoniker": "LinkFree\\InjectedServices\\CustomeService.cs",
-              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\LinkFree\\InjectedServices\\CustomeService.cs",
-              "RelativeToolTip": "LinkFree\\InjectedServices\\CustomeService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T11:44:54.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ContactUsVM.cs",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Application\\VMs\\Public\\HomePage\\ContactUsVM.cs",
               "RelativeDocumentMoniker": "Application\\VMs\\Public\\HomePage\\ContactUsVM.cs",
@@ -159,46 +127,173 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IHomePage.cs",
-              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Application\\Interfaces\\Public\\HomePage\\IHomePage.cs",
-              "RelativeDocumentMoniker": "Application\\Interfaces\\Public\\HomePage\\IHomePage.cs",
-              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Application\\Interfaces\\Public\\HomePage\\IHomePage.cs",
-              "RelativeToolTip": "Application\\Interfaces\\Public\\HomePage\\IHomePage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T11:26:50.588Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\LinkFree\\Program.cs",
-              "RelativeDocumentMoniker": "LinkFree\\Program.cs",
-              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\LinkFree\\Program.cs",
-              "RelativeToolTip": "LinkFree\\Program.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-09T20:05:08.677Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "HomePageService.cs",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Infrastructure\\Services\\Public\\HomePage\\HomePageService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Services\\Public\\HomePage\\HomePageService.cs",
               "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Infrastructure\\Services\\Public\\HomePage\\HomePageService.cs",
               "RelativeToolTip": "Infrastructure\\Services\\Public\\HomePage\\HomePageService.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAcwE0AAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAYwEcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-10T11:29:42.166Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IHomePage.cs",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Application\\Interfaces\\Public\\HomePage\\IHomePage.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\Public\\HomePage\\IHomePage.cs",
+              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Application\\Interfaces\\Public\\HomePage\\IHomePage.cs",
+              "RelativeToolTip": "Application\\Interfaces\\Public\\HomePage\\IHomePage.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAhwAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T11:26:50.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomePageController.cs",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\LinkFree\\Controllers\\Public\\HomePageController.cs",
+              "RelativeDocumentMoniker": "LinkFree\\Controllers\\Public\\HomePageController.cs",
+              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\LinkFree\\Controllers\\Public\\HomePageController.cs",
+              "RelativeToolTip": "LinkFree\\Controllers\\Public\\HomePageController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAASwCAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T11:40:43.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ContactUsFilterVM.cs",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Application\\VMs\\Public\\HomePage\\ContactUsFilterVM.cs",
+              "RelativeDocumentMoniker": "Application\\VMs\\Public\\HomePage\\ContactUsFilterVM.cs",
+              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Application\\VMs\\Public\\HomePage\\ContactUsFilterVM.cs",
+              "RelativeToolTip": "Application\\VMs\\Public\\HomePage\\ContactUsFilterVM.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T18:15:43.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "CustomeService.cs",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\LinkFree\\InjectedServices\\CustomeService.cs",
+              "RelativeDocumentMoniker": "LinkFree\\InjectedServices\\CustomeService.cs",
+              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\LinkFree\\InjectedServices\\CustomeService.cs",
+              "RelativeToolTip": "LinkFree\\InjectedServices\\CustomeService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBQAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T11:44:54.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\LinkFree\\Program.cs",
+              "RelativeDocumentMoniker": "LinkFree\\Program.cs",
+              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\LinkFree\\Program.cs",
+              "RelativeToolTip": "LinkFree\\Program.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAqwGUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T20:05:08.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ContactUsListingVM.cs",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Application\\VMs\\Public\\HomePage\\ContactUsListingVM.cs",
+              "RelativeDocumentMoniker": "Application\\VMs\\Public\\HomePage\\ContactUsListingVM.cs",
+              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Application\\VMs\\Public\\HomePage\\ContactUsListingVM.cs",
+              "RelativeToolTip": "Application\\VMs\\Public\\HomePage\\ContactUsListingVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T18:15:17.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20260610183915_statusAddedInContactUs.cs",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Infrastructure\\Migrations\\20260610183915_statusAddedInContactUs.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20260610183915_statusAddedInContactUs.cs",
+              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Infrastructure\\Migrations\\20260610183915_statusAddedInContactUs.cs",
+              "RelativeToolTip": "Infrastructure\\Migrations\\20260610183915_statusAddedInContactUs.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T18:39:15.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ResponseCode.cs",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\CommonOperations\\Constants\\Common\\ResponseCode.cs",
+              "RelativeDocumentMoniker": "CommonOperations\\Constants\\Common\\ResponseCode.cs",
+              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\CommonOperations\\Constants\\Common\\ResponseCode.cs",
+              "RelativeToolTip": "CommonOperations\\Constants\\Common\\ResponseCode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T18:19:35.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SP_GetAllContacts.sql ",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Database\\StoreProcedures\\Public\\HomePage\\SP_GetAllContacts.sql",
+              "RelativeDocumentMoniker": "Database\\StoreProcedures\\Public\\HomePage\\SP_GetAllContacts.sql",
+              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Database\\StoreProcedures\\Public\\HomePage\\SP_GetAllContacts.sql\r\n(localdb)\\ProjectModels.Database\r\n(DESKTOP-KQ7ODFA\\Nomi)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-06-10T18:12:43.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ContactUsStatus.cs",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\CommonOperations\\Constants\\Public\\HomePage\\ContactUsStatus.cs",
+              "RelativeDocumentMoniker": "CommonOperations\\Constants\\Public\\HomePage\\ContactUsStatus.cs",
+              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\CommonOperations\\Constants\\Public\\HomePage\\ContactUsStatus.cs",
+              "RelativeToolTip": "CommonOperations\\Constants\\Public\\HomePage\\ContactUsStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T18:14:14.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CommonMethods.cs",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\CommonOperations\\Methods\\CommonMethods.cs",
+              "RelativeDocumentMoniker": "CommonOperations\\Methods\\CommonMethods.cs",
+              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\CommonOperations\\Methods\\CommonMethods.cs",
+              "RelativeToolTip": "CommonOperations\\Methods\\CommonMethods.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAA3wHcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T12:04:15.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Domain.csproj",
+              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Domain\\Domain.csproj",
+              "RelativeDocumentMoniker": "Domain\\Domain.csproj",
+              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Domain\\Domain.csproj",
+              "RelativeToolTip": "Domain\\Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-10T12:18:29.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "ContactUs.cs",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Domain\\Public\\HomePage\\ContactUs.cs",
               "RelativeDocumentMoniker": "Domain\\Public\\HomePage\\ContactUs.cs",
@@ -211,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\LinkFree\\appsettings.json",
               "RelativeDocumentMoniker": "LinkFree\\appsettings.json",
@@ -224,20 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "HomePageController.cs",
-              "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\LinkFree\\Controllers\\Public\\HomePageController.cs",
-              "RelativeDocumentMoniker": "LinkFree\\Controllers\\Public\\HomePageController.cs",
-              "ToolTip": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\LinkFree\\Controllers\\Public\\HomePageController.cs",
-              "RelativeToolTip": "LinkFree\\Controllers\\Public\\HomePageController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAiwBIAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T11:40:43.08Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 23,
               "Title": "20260610113929_contactUs.cs",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Infrastructure\\Migrations\\20260610113929_contactUs.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20260610113929_contactUs.cs",
@@ -250,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Infrastructure\\Context\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Context\\AppDbContext.cs",
@@ -263,7 +345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "Instagram.cs",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Domain\\Models\\LinkFree\\Instagram.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\LinkFree\\Instagram.cs",
@@ -276,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "Dockerfile",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\LinkFree\\Dockerfile",
               "RelativeDocumentMoniker": "LinkFree\\Dockerfile",
@@ -289,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "AppDbContextModelSnapshot.cs",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Infrastructure\\Migrations\\AppDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Migrations\\AppDbContextModelSnapshot.cs",
@@ -302,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "ChatHub.cs",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Infrastructure\\SignalR\\ChatHub.cs",
               "RelativeDocumentMoniker": "Infrastructure\\SignalR\\ChatHub.cs",
@@ -315,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "ChatService.cs",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Infrastructure\\Services\\Chat\\ChatService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Services\\Chat\\ChatService.cs",
@@ -328,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "Infrastructure.csproj",
               "DocumentMoniker": "D:\\Muhammad Nouman\\Projects\\blabsterV2\\chatapp_backend\\Infrastructure\\Infrastructure.csproj",
               "RelativeDocumentMoniker": "Infrastructure\\Infrastructure.csproj",
@@ -336,8 +418,7 @@
               "RelativeToolTip": "Infrastructure\\Infrastructure.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-06-09T20:05:08.719Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-09T20:05:08.719Z"
             }
           ]
         }

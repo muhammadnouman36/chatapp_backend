@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113
+# Visual Studio Version 18
+VisualStudioVersion = 18.7.11903.348 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkFree", "LinkFree\LinkFree.csproj", "{CB391EEA-6953-4D76-ACBC-F497A90F0FDC}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{B57A13A6-F66A-4989-879E-F37E1AAA887B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonOperations", "CommonOperations\CommonOperations.csproj", "{83B37099-DEE2-4792-BEB1-BC078EE2FECA}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database", "Database\Database.sqlproj", "{F4914AA0-AA7E-48D6-8B70-C41719FBA36C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,12 @@ Global
 		{83B37099-DEE2-4792-BEB1-BC078EE2FECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83B37099-DEE2-4792-BEB1-BC078EE2FECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83B37099-DEE2-4792-BEB1-BC078EE2FECA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4914AA0-AA7E-48D6-8B70-C41719FBA36C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4914AA0-AA7E-48D6-8B70-C41719FBA36C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4914AA0-AA7E-48D6-8B70-C41719FBA36C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F4914AA0-AA7E-48D6-8B70-C41719FBA36C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4914AA0-AA7E-48D6-8B70-C41719FBA36C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4914AA0-AA7E-48D6-8B70-C41719FBA36C}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

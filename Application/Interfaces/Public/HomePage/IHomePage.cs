@@ -10,6 +10,9 @@ namespace Application.Interfaces.Public.HomePage
 {
     public interface IHomePage
     {
-        public ResponseVM ContactUs(ContactUsVM model);
+        ResponseVM ContactUs(ContactUsVM model);
+        Task<ResponseVM> GetAll(ContactUsFilterVM filter);
+        ContactUsVM GetContactById(long id);
+        ResponseVM DeleteContact(long id);
     }
 }

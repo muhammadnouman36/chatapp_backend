@@ -87,7 +87,7 @@ builder.Services.AddSwaggerGen(opt =>
 });
 
 // required: bind to dynamic port from Render
-builder.WebHost.UseUrls($"http://*:{Environment.GetEnvironmentVariable("PORT") ?? "5000"}");
+//builder.WebHost.UseUrls($"http://*:{Environment.GetEnvironmentVariable("PORT") ?? "5000"}");
 
 var app = builder.Build();
 
@@ -99,7 +99,7 @@ var app = builder.Build();
     app.UseSwaggerUI();
 //}
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseCors("CorsPolicy");
 
 app.MapHub<ChatHub>("/ChatHub");

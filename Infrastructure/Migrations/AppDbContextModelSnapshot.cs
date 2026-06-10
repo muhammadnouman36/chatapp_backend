@@ -195,6 +195,11 @@ namespace Infrastructure.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("NVARCHAR");
 
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("NVARCHAR");
+
                     b.Property<string>("Subject")
                         .IsRequired()
                         .HasMaxLength(500)
