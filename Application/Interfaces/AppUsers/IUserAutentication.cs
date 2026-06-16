@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +19,6 @@ namespace Application.Interfaces.AppUsers
         ResponseVM UnBlockUser(long Id);
         ResponseVM DeleteUser(long Id);
         ResponseVM BlockUser(DeclineUserVM model);
-
+        ResponseVM RefreshToken(TokenApiModel tokenApiModel);
     }
 }

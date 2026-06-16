@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
@@ -59,6 +59,13 @@ namespace Domain.AppUsers
         public string ProfileImageUrl { get; set; } = "";
         public bool IsEmailVerified { get; set; } = false;
         public bool IsBlocked { get; set; } = false;
+
+        [Column(TypeName = "NVARCHAR")]
+        [MaxLength(50)]
+        public string Role { get; set; } = "users"; // Default role
+
+        public string? RefreshToken { get; set; }
+        public DateTime? RefreshTokenExpiryTime { get; set; }
 
         public bool IsDeleted { get; set; } = false;
     }

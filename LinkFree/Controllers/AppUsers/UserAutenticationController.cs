@@ -1,4 +1,4 @@
-﻿using Application.Interfaces.AppUsers;
+using Application.Interfaces.AppUsers;
 using Application.Interfaces.LinkFree;
 using Application.VMs.AppUsers.Autentication;
 using Application.VMs.LinkFree;
@@ -31,6 +31,20 @@ namespace LinkFree.Controllers.AppUsers
         {
 
             var result = _services.loginUser(model);
+            return Ok(result);
+        }
+
+        [HttpPost("RefreshToken")]
+        public IActionResult RefreshToken(TokenApiModel model)
+        {
+            if (model == null)
+                return BadRequest("Invalid client request");
+
+            var result = _services.RefreshToken(model);
+            if (result.responseCode != 200)
+            {
+                return BadRequest(result);
+            }
             return Ok(result);
         }
 

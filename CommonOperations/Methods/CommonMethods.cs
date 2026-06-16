@@ -1,4 +1,4 @@
-﻿using Dapper;
+using Dapper;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -42,25 +42,52 @@ namespace CommonOperations.Methods
             var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(password);
             return System.Convert.ToBase64String(plainTextBytes);
         }
-        public static string GenerateJwtToken(string UserEmail, long UserID, string UserName, IConfiguration config)
+        public static string GenerateJwtToken(string UserEmail, long UserID, string UserName, string Role, IConfiguration config)
         {
-
             var authClaims = new List<Claim>
             {
                 new Claim("Email", UserEmail),
                 new Claim("ID", UserID.ToString()),
-                new Claim("UserName", UserName)
+                new Claim("UserName", UserName),
+                new Claim(ClaimTypes.Role, string.IsNullOrEmpty(Role) ? "users" : Role)
             };
             var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["JWT:Secret"]));
             var token = new JwtSecurityToken(
                 issuer: config["JWT:ValidIssuer"],
                 audience: config["JWT:ValidAudience"],
-                expires: DateTime.UtcNow.AddDays(5),
+                expires: DateTime.UtcNow.AddMinutes(30), // Short-lived access token
                 claims: authClaims,
                 signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
             );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        public static string GenerateRefreshToken()
+        {
+            var randomNumber = new byte[64];
+            using var rng = RandomNumberGenerator.Create();
+            rng.GetBytes(randomNumber);
+            return Convert.ToBase64String(randomNumber);
+        }
+
+        public static ClaimsPrincipal? GetPrincipalFromExpiredToken(string? token, IConfiguration config)
+        {
+            var tokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateAudience = false,
+                ValidateIssuer = false,
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["JWT:Secret"])),
+                ValidateLifetime = false // Here we are saying that we don't care about the token's expiration date
+            };
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var principal = tokenHandler.ValidateToken(token, tokenValidationParameters, out SecurityToken securityToken);
+            if (securityToken is not JwtSecurityToken jwtSecurityToken || !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.InvariantCultureIgnoreCase))
+                throw new SecurityTokenException("Invalid token");
+
+            return principal;
         }
         public static string ExtractClaimFromToken(string token, string claimType)
         {
@@ -86,12 +113,12 @@ namespace CommonOperations.Methods
             string response = "";
             var smtpSettings = config.GetSection("SmtpSettings");
 
-            using (SmtpClient client = new SmtpClient(smtpSettings["SmtpServer"], int.Parse(smtpSettings["SmtpPort"])))
+            using (SmtpClient client = new SmtpClient(smtpSettings["Server"], int.Parse(smtpSettings["Port"])))
             {
                 client.UseDefaultCredentials = false;
-                client.Credentials = new NetworkCredential(smtpSettings["SmtpUsername"], smtpSettings["SmtpPassword"]);
+                client.Credentials = new NetworkCredential(smtpSettings["SenderEmail"], smtpSettings["Password"]);
                 MailMessage mailMessage = new MailMessage();
-                mailMessage.From = new MailAddress(smtpSettings["SmtpUsername"]);
+                mailMessage.From = new MailAddress(smtpSettings["SenderEmail"]);
                 mailMessage.To.Add(userEmail);
                 mailMessage.Subject = subject;
                 mailMessage.Body = body;

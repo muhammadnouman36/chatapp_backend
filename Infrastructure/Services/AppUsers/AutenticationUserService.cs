@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -52,10 +52,8 @@ namespace Infrastructure.Services.AppUsers
                     UserName = user.UserName,
                     FirstName = user.FirstName,
                     LastName = user.LastName,
-
+                    Role = "users" // Default role
                 };
-
-               
 
                 _context.AppUser.Add(userModel);
                 _context.SaveChanges();
@@ -117,14 +115,21 @@ namespace Infrastructure.Services.AppUsers
             }
 
 
+            var refreshToken = CommonMethods.GenerateRefreshToken();
+            user.RefreshToken = refreshToken;
+            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7); // Refresh token valid for 7 days
+            _context.SaveChanges();
+
             // Prepare the response data on successful login
             var loginData = new onLoggedInVM
             {
-                Token = CommonMethods.GenerateJwtToken(user.Email, user.Id, user.UserName, _config),
+                Token = CommonMethods.GenerateJwtToken(user.Email, user.Id, user.UserName, user.Role, _config),
                 Email = user.Email,
                 UserName = user.UserName,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
+                RefreshToken = refreshToken,
+                Role = user.Role
                 //ProfileBase64 = CommonMethods.RetrieveBase64Data(user.ProfileImageUrl)
             };
 
@@ -141,7 +146,7 @@ namespace Infrastructure.Services.AppUsers
 
             var setting = new GoogleJsonWebSignature.ValidationSettings
             {
-                Audience = new List<string> { "57908406230-5l08r4mdk26ghr1dj9p6p025q3nb9b2j.apps.googleusercontent.com" }
+                Audience = new List<string> { _config["Google:Client_id"] }
             };
 
             // Validate token recived from frontend here
@@ -167,22 +172,25 @@ namespace Infrastructure.Services.AppUsers
                     Password = "",
                     ProfileImageUrl = res.Picture,
                     IsEmailVerified = true,
-                    UserName = res.Email.Split('@')[0]
+                    UserName = res.Email.Split('@')[0],
+                    Role = "users",
+                    RefreshToken = CommonMethods.GenerateRefreshToken(),
+                    RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7)
                 };
 
                 _context.AppUser.Add(newUser);
                 await _context.SaveChangesAsync();
 
-
-
                 var loginData = new onLoggedInVM
                 {
-                    Token = CommonMethods.GenerateJwtToken(newUser.Email, newUser.Id, newUser.UserName, _config),
+                    Token = CommonMethods.GenerateJwtToken(newUser.Email, newUser.Id, newUser.UserName, newUser.Role, _config),
                     Email = newUser.Email,
                     UserName = newUser.UserName,
                     FirstName = newUser.FirstName,
                     LastName = newUser.LastName,
-                    ProfileBase64 = res.Picture
+                    ProfileBase64 = res.Picture,
+                    RefreshToken = newUser.RefreshToken,
+                    Role = newUser.Role
                 };
 
                 response.responseCode = 200;
@@ -191,15 +199,22 @@ namespace Infrastructure.Services.AppUsers
             }
             else
             {
+                user.RefreshToken = CommonMethods.GenerateRefreshToken();
+                user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
+                _context.AppUser.Update(user);
+                await _context.SaveChangesAsync();
+
                 // old user here
                 var loginData = new onLoggedInVM
                 {
-                    Token = CommonMethods.GenerateJwtToken(user.Email, user.Id, user.UserName, _config),
+                    Token = CommonMethods.GenerateJwtToken(user.Email, user.Id, user.UserName, user.Role, _config),
                     Email = user.Email,
                     UserName = user.UserName,
                     FirstName = user.FirstName,
                     LastName = user.LastName,
-                    ProfileBase64 = res.Picture
+                    ProfileBase64 = res.Picture,
+                    RefreshToken = user.RefreshToken,
+                    Role = user.Role
                 };
                 response.responseCode = 200;
                 response.responseMessage = "Login successful";
@@ -306,14 +321,17 @@ namespace Infrastructure.Services.AppUsers
             try
             {
                 // Generate reset token
-                var resetToken = CommonMethods.GenerateJwtToken(existingMail.Email, existingMail.Id, existingMail.UserName, _config);
+                var resetToken = CommonMethods.GenerateJwtToken(existingMail.Email, existingMail.Id, existingMail.UserName,existingMail.Role, _config);
 
                 // Prepare email subject and body
                 string subject = "Reset your Password";
-                string body = $"Click this link to Reset Your Password: {resetToken}";
+                string appLink = "http://localhost:4200/reset-password?resetToken=";
+                string body = $"Click this link to Reset Your Password: {appLink +resetToken}";
+
+
 
                 // Send email synchronously
-                //CommonMethod.SendEmail(existingMail.UserEmail, subject, body, _config);
+                CommonMethods.SendEmail(existingMail.Email, subject, body, _config);
 
                 response.responseCode = 200;
                 response.responseMessage = "Password reset Email sent successfully";
@@ -400,6 +418,64 @@ namespace Infrastructure.Services.AppUsers
 
             response.responseCode =200;
             response.responseMessage = "User successfully blocked.";
+            return response;
+        }
+
+        public ResponseVM RefreshToken(TokenApiModel tokenApiModel)
+        {
+            ResponseVM response = ResponseVM.Instance;
+
+            if (tokenApiModel == null || string.IsNullOrEmpty(tokenApiModel.AccessToken) || string.IsNullOrEmpty(tokenApiModel.RefreshToken))
+            {
+                response.responseCode = 400;
+                response.responseMessage = "Invalid client request";
+                return response;
+            }
+
+            string accessToken = tokenApiModel.AccessToken;
+            string refreshToken = tokenApiModel.RefreshToken;
+
+            var principal = CommonMethods.GetPrincipalFromExpiredToken(accessToken, _config);
+            if (principal == null)
+            {
+                response.responseCode = 400;
+                response.responseMessage = "Invalid access token or refresh token";
+                return response;
+            }
+
+            string email = principal.Claims.FirstOrDefault(c => c.Type == "Email")?.Value;
+            if (email == null)
+            {
+                response.responseCode = 400;
+                response.responseMessage = "Invalid access token or refresh token";
+                return response;
+            }
+
+            var user = _context.AppUser.FirstOrDefault(u => u.Email == email && !u.IsDeleted);
+
+            if (user == null || user.RefreshToken != refreshToken || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
+            {
+                response.responseCode = 400;
+                response.responseMessage = "Invalid access token or refresh token";
+                return response;
+            }
+
+            var newAccessToken = CommonMethods.GenerateJwtToken(user.Email, user.Id, user.UserName, user.Role, _config);
+            var newRefreshToken = CommonMethods.GenerateRefreshToken();
+
+            user.RefreshToken = newRefreshToken;
+            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7); // Extended time for refresh token
+            
+            _context.SaveChanges();
+
+            response.responseCode = 200;
+            response.responseMessage = "Token refreshed successfully";
+            response.data = new TokenApiModel
+            {
+                AccessToken = newAccessToken,
+                RefreshToken = newRefreshToken
+            };
+
             return response;
         }
 

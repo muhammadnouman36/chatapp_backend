@@ -48,7 +48,7 @@ builder.Services.AddCors(options => options.AddPolicy(name: "CorsPolicy",
 builder =>
 {
     builder.WithOrigins("http://localhost:3000", "https://localhost:7079/",
-           "http://localhost:4200")
+           "http://localhost:4200","https://blabster.pages.dev")
            .AllowAnyHeader()
            .AllowAnyMethod()
            .SetIsOriginAllowed((host) => true)
